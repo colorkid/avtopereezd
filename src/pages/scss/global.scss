@@ -1,0 +1,53 @@
+$orange: #FF7F00;
+$black: #16171B;
+$blue: #38A8DF;
+$gray: #383635;
+
+input,
+button,
+textarea {
+	&:active {
+		outline: none;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0;
+	color: $black;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 15px;
+}
+
+.button {
+	padding: 10px 20px;
+	white-space: nowrap;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 18px;
+	background-color: $orange;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $blue;
+	}
+
+	&:active {
+		background-color: darken($blue, 10%);
+	}
+}
+
+@import "../../components/header/header";
