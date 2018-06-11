@@ -5,6 +5,7 @@ const gulp = require('gulp');
       autoprefixer = require('gulp-autoprefixer');
       sourcemaps = require('gulp-sourcemaps');
       notify = require("gulp-notify");
+      concat = require('gulp-concat');
       plumber = require('gulp-plumber');
       browserSync = require('browser-sync').create();
  
@@ -15,6 +16,16 @@ gulp.task('serve', function() {
         },
         browser: 'chrome'
     });
+    browserSync.watch('dist', browserSync.reload)
+});
+
+gulp.task('vendor', function() {  
+    //return gulp.src('src/**/*.js')
+    return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/vue/dist/vue.min.js', 'src/**/*.js'])
+    .pipe(concat('bundle.js'))
+    .pipe(gulp.dest('build/')).pipe(browserSync.reload({
+      stream:true
+    }));
 });
 
 gulp.task('pug', function () {
@@ -51,9 +62,10 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
 	gulp.watch('src/**/*.pug', gulp.series('pug'));
 	gulp.watch('src/**/*.scss', gulp.series('sass'));
+	gulp.watch('src/**/*.js', gulp.series('vendor'));
 });
 
 gulp.task('start', gulp.series(
-	gulp.parallel('pug', 'sass'),
+	gulp.parallel('pug', 'sass', 'vendor'),
 	gulp.parallel('watch', 'serve')
 ));

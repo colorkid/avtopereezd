@@ -1,0 +1,15 @@
+mixin firstScreen(title, slogan, trigger)
+	section.first-screen
+		div.wrapper
+			div.first-screen__wrapper
+				div.first-screen__top
+					h1.first-screen__title=title
+				div.first-screen__middle
+					div.first-screen__logo
+						img(src="logo_itog_1.png" alt="Avtoperevozchik логистическая компания")
+						div.first-screen__slogan=slogan
+					form(class="trigger-form", action="/")
+						div.trigger-form__trigger=trigger
+						input(type="text", class="trigger-form__input input-field", name="name", placeholder="Ваше имя")
+						input(type="tel", class="trigger-form__input input-field", name="tel", placeholder="Ваш телефон" required)
+						input(type="sumbit", class="trigger-form__button button", value="Заказать")

@@ -1,0 +1,54 @@
+mixin aboutCompany(abouttxt, nameOfCompany, callToAction)
+	section.about-company
+		div.wrapper
+			div.about-company__wrapper
+				h2.about-company__title О компании
+				div.about-company__left
+						div.workers
+							h3.workers__title Сотрудники
+							div.workers__item
+								div.workers__pic
+									img(src="kulshat.jpg" alt="Ежов Александр Александрович")
+								div.workers__position Менеджер
+								div.workers__name Ежов Александр Александрович
+							div.workers__item
+								div.workers__pic
+									img(src="akerke.jpg" alt="Летов Евгений Леонидович")
+								div.workers__position Менеджер
+								div.workers__name Летов Евгений Леонидович
+				div.about-company__right
+					div.about-company__txt=abouttxt
+					div.facts
+						h3.facts__title Факты о Логистической компании Avtoperevozchik
+						div.facts__item.facts__item--experence
+							div.facts__txt Сотрудники компании имеют опыт грузо-перевозочных услуг с 2010 года.
+						div.facts__item.facts__item--collective
+							div.facts__txt Штат компании более 25 сотрудников.
+						div.facts__item.facts__item--cars
+							div.facts__txt Наш автопарк состоит из 10 грузовых автомобилей.
+						div.facts__item.facts__item--storage
+							div.facts__txt Наша компания обеспечена теплыми и холодными складскими помещениями.
+					div.about-company__footer
+						form(class="about-company-form about-company__margin-right-20", action="form.php", method="post")
+							div.about-company-form__trigger=callToAction
+							input(type="text", class="about-company-form__input input-field", name="name", placeholder="Ваше имя")
+							input(type="tel", class="about-company-form__input input-field", name="tel", placeholder="Ваш телефон" required)
+							input(type="sumbit", class="about-company-form__button button", value="Заказать")
+						div.callback-pic
+							div.callback-pic__pic
+								img(src="akerke.jpg" alt="Летов Евгений Леонидович")
+							div.callback-pic__txt Я Вам перезвоню
+	
+
+
+
+
+
+					
+
+							
+
+
+
+
+

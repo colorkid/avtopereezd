@@ -2,7 +2,12 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
 	background-color: $gray;
+	box-shadow: 0 1px 1px 0 rgba(33,33,33,.7);
+	z-index: 2;
 
 	&__wrapper {
 		display: flex;
@@ -37,7 +42,7 @@
 	list-style: none;
 
 	&__item {
-		margin: 0 15px;
+		margin: 0 10px;
 	}
 
 	&__link {
@@ -91,7 +96,7 @@
 
 @media (max-width: 1169px) {
 	.main-phones {
-		max-width: 115px;
+		max-width: 125px;
 	    padding-left: 0;
 
 	    &:before {
@@ -116,7 +121,7 @@
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
 	.header__nav {
 		display: none;
 	}

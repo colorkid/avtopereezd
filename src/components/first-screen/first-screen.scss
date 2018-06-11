@@ -1,0 +1,174 @@
+.first-screen {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+	background-color: $crem;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    width: 0;
+	    height: 0;
+	    border-bottom: 46px solid $blue;
+	    border-right: 67px solid transparent;
+	}
+
+	&:after {
+		content: "";
+	    position: absolute;
+	    bottom: 0;
+	    right: 0;
+	    width: 0;
+	    height: 0;
+	    border-bottom: 66px solid $blue;
+	    border-left: 93px solid transparent;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 80px 0;
+	}
+
+	&__title {
+		text-align: center;
+    	font-size: 74px;
+    	font-weight: 700;
+	}
+
+	&__top {
+		display: flex;
+    	justify-content: center;
+    	flex-wrap: wrap;
+		width: 100%;
+		text-align: center;
+	}
+
+	&__middle {
+		display: flex;
+	}
+
+	&__logo {
+		margin-right: 40px;
+		text-align: center;
+		font-size: 0;
+	}
+
+	&__slogan {
+		width: 100%;
+		font-size: 18px;
+    	font-weight: 300;
+	}
+
+}
+
+.trigger-form {
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+	text-align: center;
+	width: 281px;
+    padding: 15px 15px;
+
+	&__trigger {
+		display: inline-block;
+	    margin: 0 0 20px 0;
+	    text-align: center;
+	    font-size: 20px;
+	    font-weight: 600;
+	}
+
+	&__input {
+		width: 100%;
+		height: 40px;
+		margin: 0 0 15px 0;
+
+		&:focus {
+			border: 1px solid $blue;
+		}
+	}
+
+	&__button {
+		width: 100%;
+		height: 40px;
+		margin: 0 0 15px 0;
+		background-color: $blue;
+
+		&:hover {
+			background-color: darken($blue, 5%);
+		}
+
+		&:active {
+			background-color: darken($blue, 10%);
+		}
+	}
+}
+
+
+@media (max-width: 1024px) {
+
+	.first-screen {
+
+		&:before {
+			display: none;
+		}
+
+		&:after {
+			display: none;
+		}
+
+		&__title {
+			font-size: 55px;
+		}
+
+	}
+
+}
+
+@media (max-width: 768px) {
+	.first-screen {
+
+		&__wrapper {
+			padding: 40px;
+		}
+		
+		&__title {
+			font-size: 44px;
+		}
+
+		&__middle {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__logo {
+			margin: 20px 0;
+		}
+
+		.trigger-form {
+			margin: 20px 0;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+
+	.first-screen {
+
+		&__wrapper {
+			padding: 0;
+		}
+
+		&__title {
+			font-size: 36px;
+		}
+
+	}
+
+}
