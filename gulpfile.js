@@ -14,7 +14,7 @@ const gulp = require('gulp');
 gulp.task('serve', function() {
     browserSync.init({
         server: {
-            baseDir: 'build'
+            baseDir: 'docs'
         },
         browser: 'chrome'
     });
@@ -24,19 +24,19 @@ gulp.task('serve', function() {
 gulp.task('svg', function () {
   return gulp.src('src/**/*.svg')
   .pipe(svgmin())
-  .pipe(gulp.dest('build/images'));
+  .pipe(gulp.dest('docs/images'));
 });
 
 gulp.task('img', function () {
   gulp.src('src/**/*.{png,jpg,jpeg,gif}')
   .pipe(tinypng({key: 'bO_kbCYOYQPfNw8RyV2YW-HEMLCkCm52'}))
-  .pipe(gulp.dest('build/images'));
+  .pipe(gulp.dest('docs/images'));
 });
 
 gulp.task('vendor', function() {  
   return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/vue/dist/vue.min.js', 'src/**/*.js'])
   .pipe(concat('bundle.js'))
-  .pipe(gulp.dest('build/')).pipe(browserSync.reload({
+  .pipe(gulp.dest('docs/')).pipe(browserSync.reload({
     stream:true
   }));
 });
@@ -47,7 +47,7 @@ gulp.task('pug', function () {
   	.pipe(pug({
     	pretty:true
   	}))
-  	.pipe(gulp.dest('build'))
+  	.pipe(gulp.dest('docs'))
   	.on('end',browserSync.reload);
 });
 
@@ -66,7 +66,7 @@ gulp.task('sass', function () {
     }))
     .pipe(csso())
 	.pipe(sourcemaps.write())
-  	.pipe(gulp.dest('build'))
+  	.pipe(gulp.dest('docs'))
   	.pipe(browserSync.reload({
   		stream:true
   	}));

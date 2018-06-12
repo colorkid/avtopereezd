@@ -5,6 +5,7 @@
     <title>Грузоперевозки Алматы  &amp;  Международные перевозки</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script&amp;amp;subset=cyrillic" rel="stylesheet">
     <link href="global.css" rel="stylesheet" type="text/css">
   </head>
   <body><header class="header">
@@ -46,18 +47,20 @@
           <section class="first-screen">
             <div class="wrapper">
               <div class="first-screen__wrapper">
+                <div class="first-screen__logo"><img src="images/components/first-screen/logo_itog_1.png" alt="Avtoperevozchik логистическая компания">
+                  <div class="first-screen__slogan">Преодолевая любые расстояния</div>
+                </div>
                 <div class="first-screen__top">
                   <h1 class="first-screen__title">Грузоперевозки Алматы &amp; Международные перевозки</h1>
                 </div>
                 <div class="first-screen__middle">
-                  <div class="first-screen__logo"><img src="images/components/first-screen/logo_itog_1.png" alt="Avtoperevozchik логистическая компания">
-                    <div class="first-screen__slogan">Преодолевая любые расстояния</div>
-                  </div>
                   <form class="trigger-form" action="/">
                     <div class="trigger-form__trigger">Сделайте заказ сейчас и получите индивидуальное предложение</div>
-                    <input class="trigger-form__input input-field" type="text" name="name" placeholder="Ваше имя">
-                    <input class="trigger-form__input input-field" type="tel" name="tel" placeholder="+7 (___) ___-__-__" title="Формат: +7 (096) 999 99 99" required>
-                    <input class="trigger-form__button button" type="submit" value="Заказать">
+                    <div class="trigger-form__wrapper">
+                      <input class="trigger-form__input input-field" type="text" name="name" placeholder="Ваше имя">
+                      <input class="trigger-form__input input-field" type="tel" name="tel" placeholder="+7 (___) ___-__-__" title="Формат: +7 (096) 999 99 99" required>
+                      <input class="trigger-form__button button" type="submit" value="Заказать">
+                    </div>
                   </form>
                 </div>
               </div>
@@ -71,12 +74,12 @@
                   <div class="workers">
                     <h3 class="workers__title">Сотрудники</h3>
                     <div class="workers__item">
-                      <div class="workers__pic"><img src="images/components/about-company/kulshat.jpg" alt="Ежов Александр Александрович"></div>
+                      <div class="workers__pic"><img src="images/components/about-company/letov.jpg" alt="Ежов Александр Александрович"></div>
                       <div class="workers__position">Менеджер</div>
                       <div class="workers__name">Ежов Александр Александрович</div>
                     </div>
                     <div class="workers__item">
-                      <div class="workers__pic"><img src="images/components/about-company/akerke.jpg" alt="Летов Евгений Леонидович"></div>
+                      <div class="workers__pic"><img src="images/components/about-company/ejov.jpg" alt="Летов Евгений Леонидович"></div>
                       <div class="workers__position">Менеджер</div>
                       <div class="workers__name">Летов Евгений Леонидович</div>
                     </div>
@@ -107,11 +110,44 @@
                       <input class="about-company-form__button button" type="submit" value="Заказать">
                     </form>
                     <div class="callback-pic">
-                      <div class="callback-pic__pic"><img src="images/components/about-company/opera.jpg" alt="Летов Евгений Леонидович"></div>
                       <div class="callback-pic__txt">Я Вам перезвоню</div>
+                      <div class="callback-pic__pic"><img src="images/components/about-company/letov.jpg" alt="Летов Евгений Леонидович"></div>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+          <section class="road-map" id="road-map">
+            <div class="wrapper">
+              <div class="road-map__wrapper">
+                <h2 class="road-map__title">Схема работы</h2>
+                <ul class="road-map__ul">
+                  <li class="road-map__item">
+                    <h3 class="road-map__name">Звонок от Вас</h3>
+                    <ul class="road-map__sub-ul">
+                      <li class="road-map__sub-item">Вы обращаетесь в наш  call-centr или оставляете заявку на сайте.</li>
+                      <li class="road-map__sub-item">Менеджер Вас консультирует об услугах и рассчитывает примерную стоимость.</li>
+                      <li class="road-map__sub-item">Наш менеджер выезжает к Вам для подписания договора.</li>
+                    </ul>
+                  </li>
+                  <li class="road-map__item">
+                    <h3 class="road-map__name">Выполнение работ</h3>
+                    <ul class="road-map__sub-ul">
+                      <li class="road-map__sub-item">Вы вносите предоплату.</li>
+                      <li class="road-map__sub-item">Взвешивание и погрузка груза с пункта отправки.</li>
+                      <li class="road-map__sub-item">Перевозка груза.</li>
+                    </ul>
+                  </li>
+                  <li class="road-map__item">
+                    <h3 class="road-map__name">Доставка в пункт назначения</h3>
+                    <ul class="road-map__sub-ul">
+                      <li class="road-map__sub-item">Доставка в пункт назначения.</li>
+                      <li class="road-map__sub-item">Разгрузка груза и прием грузополучателем.</li>
+                      <li class="road-map__sub-item">Вы производите полный расчет.</li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </div>
           </section>

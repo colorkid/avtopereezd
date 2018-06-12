@@ -7,7 +7,7 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-     	padding: 60px 0;
+     	padding: 60px 0 90px 0;
 	}
 
 	&__title {
@@ -68,7 +68,6 @@
 		border-radius: 2px;
 		overflow: hidden;
 		font-size: 0;
-		box-shadow: 0 1px 1px 0 rgba(33,33,33,.7);
 	}
 
 	&__position {
@@ -86,7 +85,7 @@
 			margin: 0 auto;
 			width: 25%;
 			height: 4px;
-			background-color: $orange;
+			background-color: $primary;
 		}
 	}
 
@@ -129,7 +128,6 @@
 		    background-size: 50%;
 		    background-repeat: no-repeat;
 		    background-position: center;
-		    box-shadow: 0 1px 1px 0px rgba(33, 33, 33, 0.7);
 		}
 
 		&--experence {
@@ -203,7 +201,7 @@
 }
 
 .callback-pic {
-	min-width: 218px;
+	min-width: 194px;
 	text-align: center;
 
 	&__pic {
@@ -211,12 +209,10 @@
 		border-radius: 2px;
 		overflow: hidden;
 		font-size: 0;
-		box-shadow: 0 1px 1px 0 rgba(33,33,33,.7);
-		font-size: 0;
 	}
 
 	&__txt {
-		margin: 7.5px 0 0 0;
+		margin: 0 0 7.5px 0;
     	font-size: 14px;
     	font-style: italic;
 	}

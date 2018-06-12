@@ -4,6 +4,7 @@ $blue: #01A89E;
 $gray: #383635;
 $crem: #F3F3F3;
 $lightBlue: #F1F4F7;
+$primary: #FFA802;
 
 input,
 button,
@@ -95,17 +96,16 @@ main {
 	border-radius: 2px;
 	color: #fff;
 	font-size: 18px;
-	background-color: $orange;
-	box-shadow: 0 1px 1px 0 rgba(33,33,33,.7);
+	background-color: $primary;
 	cursor: pointer;
 	z-index: 1;
 
 	&:hover {
-		background-color: darken($orange, 5%);
+		background-color: darken($primary, 5%);
 	}
 
 	&:active {
-		background-color: darken($orange, 10%);
+		background-color: darken($primary, 10%);
 	}
 }
 
@@ -120,3 +120,4 @@ main {
 @import "../../components/header/header";
 @import "../../components/first-screen/first-screen";
 @import "../../components/about-company/about-company";
+@import "../../components/road-map/road-map";
