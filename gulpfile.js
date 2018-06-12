@@ -7,6 +7,8 @@ const gulp = require('gulp');
       notify = require("gulp-notify");
       concat = require('gulp-concat');
       plumber = require('gulp-plumber');
+      tinypng = require('gulp-tinypng-compress');
+      svgmin = require('gulp-svgmin');
       browserSync = require('browser-sync').create();
  
 gulp.task('serve', function() {
@@ -19,13 +21,24 @@ gulp.task('serve', function() {
     browserSync.watch('dist', browserSync.reload)
 });
 
+gulp.task('svg', function () {
+  return gulp.src('src/**/*.svg')
+  .pipe(svgmin())
+  .pipe(gulp.dest('build/images'));
+});
+
+gulp.task('img', function () {
+  gulp.src('src/**/*.{png,jpg,jpeg,gif}')
+  .pipe(tinypng({key: 'bO_kbCYOYQPfNw8RyV2YW-HEMLCkCm52'}))
+  .pipe(gulp.dest('build/images'));
+});
+
 gulp.task('vendor', function() {  
-    //return gulp.src('src/**/*.js')
-    return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/vue/dist/vue.min.js', 'src/**/*.js'])
-    .pipe(concat('bundle.js'))
-    .pipe(gulp.dest('build/')).pipe(browserSync.reload({
-      stream:true
-    }));
+  return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/vue/dist/vue.min.js', 'src/**/*.js'])
+  .pipe(concat('bundle.js'))
+  .pipe(gulp.dest('build/')).pipe(browserSync.reload({
+    stream:true
+  }));
 });
 
 gulp.task('pug', function () {
@@ -67,5 +80,5 @@ gulp.task('watch', function () {
 
 gulp.task('start', gulp.series(
 	gulp.parallel('pug', 'sass', 'vendor'),
-	gulp.parallel('watch', 'serve')
+	gulp.parallel('watch', 'serve', 'img', 'svg')
 ));
