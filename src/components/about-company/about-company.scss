@@ -38,10 +38,6 @@
 		padding: 20px;
 		background-color: $crem;
 	}
-
-	&__margin-right-20 {
-		margin: 0 20px 0 0;
-	}
 }
 
 .workers {
@@ -168,7 +164,8 @@
 
 	&__trigger {
 		display: inline-block;
-	    margin: 0 0 20px 0;
+		max-width: 480px;
+	    margin: 0 0 22px 0;
 	    text-align: center;
 	    font-size: 20px;
 	    font-weight: 600;
@@ -197,24 +194,6 @@
 		&:active {
 			background-color: darken($blue, 10%);
 		}
-	}
-}
-
-.callback-pic {
-	min-width: 194px;
-	text-align: center;
-
-	&__pic {
-		width: 100%;
-		border-radius: 2px;
-		overflow: hidden;
-		font-size: 0;
-	}
-
-	&__txt {
-		margin: 0 0 7.5px 0;
-    	font-size: 14px;
-    	font-style: italic;
 	}
 }
 

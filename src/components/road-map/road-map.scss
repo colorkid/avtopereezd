@@ -19,26 +19,85 @@
 
 	&__ul {
 		display: flex;
-    	justify-content: space-around;
+    	justify-content: space-between;
     	width: 100%;
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
 
-	&__name {
-		white-space: nowrap;
-	}
-
 	&__item {
 		max-width: 285px;
-		padding: 0 15px;
+		padding: 100px 15px 0 15px;
 		position: relative;
 
 		&:before {
 			content: "";
 			position: absolute;
+			left: 0;
+			right: 0;
 			top: 0;
+			height: 75px;
+			margin: 0 auto;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 75px;
+		}
+
+		&:nth-child(1) {
+
+			&:before {
+				background-image: url(images/components/road-map/talking-by-phone-auricular-symbol-with-speech-bubble.svg);
+			}
+		}
+
+		&:nth-child(2) {
+			
+			&:before {
+				background-image: url(images/components/road-map/logistics-delivery-truck-in-movement.svg);
+			}
+		}
+
+		&:nth-child(3) {
+			
+			&:before {
+				background-image: url(images/components/road-map/packages-transportation-on-a-truck.svg);
+			}
+		}
+	}
+
+	&__arrows {
+		display: flex;
+	    justify-content: space-around;
+	    height: 50px;
+	    position: relative;
+	    top: 60px;
+	    width: 66.6%;
+	}
+
+	&__arrow {
+		width: 33.3%;
+   		height: 55px;
+		opacity: 0;
+		background-image: url(images/components/road-map/next.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 55px;
+
+		&:nth-child(1) {
+			animation: showone 3s infinite linear;
+		}
+
+		&:nth-child(2) {
+			animation: showtwo 3s infinite linear;
+		}
+
+		&:nth-child(3) {
+			animation: showthree 3s infinite linear;
+		}
+
+		&:last-child {
+			display: none;
 		}
 	}
 
@@ -65,4 +124,45 @@
     		background-color: $primary;
     	}
 	}
+}
+
+@keyframes showone {
+  24% {opacity: 0;}
+  25% {opacity: 1;}
+  99% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes showtwo {
+  49% {opacity: 0;}
+  50% {opacity: 1;}
+  99% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes showthree {
+  74% {opacity: 0;}
+  75% {opacity: 1;}
+  99% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+
+@media (max-width: 1024px) {
+	.road-map {
+
+		&__ul {
+			flex-direction: column;
+    		align-items: center;
+		}
+
+		&__item {
+			margin: 15px 0;
+		}
+	
+		&__arrows {
+			display: none;
+		}
+	}
+
 }

@@ -3,6 +3,9 @@ mixin roadMap(arr)
 			div.wrapper
 				div.road-map__wrapper
 					h2.road-map__title Схема работы
+					div.road-map__arrows
+						each valarrow, indexarrow in arr
+							div.road-map__arrow
 					ul.road-map__ul
 						each val, index in arr
 							li.road-map__item
