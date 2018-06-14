@@ -1,9 +1,7 @@
-$orange: #E4003A;
 $black: #333;
 $primary: #01A89E;
 $gray: #383635;
 $crem: #F3F3F3;
-$lightBlue: #F1F4F7;
 $accent: #FFA802;
 
 input,
@@ -122,3 +120,5 @@ main {
 @import "../../components/about-company/about-company";
 @import "../../components/road-map/road-map";
 @import "../../components/features/features";
+@import "../../components/calculator/calculator";
+@import "../../components/answers/answers";

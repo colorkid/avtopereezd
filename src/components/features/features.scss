@@ -6,7 +6,7 @@
 
 	&__wrapper {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		flex-wrap: wrap;
      	padding: 60px 0 100px 0;
 	}
@@ -51,7 +51,7 @@
 		}
 
 		&--control {
-			background-image: url(images/components/features/settings-work-tool.svg);
+			background-image: url(images/components/features/settings-gears.svg);
 		}
 
 		&--price {
@@ -89,5 +89,18 @@
 	    border-left: 56.25px solid transparent;
 	    border-right: 52.5px solid transparent;
 	    border-bottom: 82.5px solid $accent;
+	}
+}
+
+@media (max-width: 1024px) {
+	.features {
+
+		&__wrapper {
+			justify-content: center;
+		}
+
+		&__item {
+			max-width: 500px;
+		}
 	}
 }

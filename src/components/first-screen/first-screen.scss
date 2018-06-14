@@ -6,28 +6,6 @@
 	background-color: $crem;
 	overflow: hidden;
 
-	&:before {
-		content: "";
-	    position: absolute;
-	    bottom: 0;
-	    left: 0;
-	    width: 0;
-	    height: 0;
-	    border-bottom: 46px solid $primary;
-	    border-right: 67px solid transparent;
-	}
-
-	&:after {
-		content: "";
-	    position: absolute;
-	    bottom: 0;
-	    right: 0;
-	    width: 0;
-	    height: 0;
-	    border-bottom: 66px solid $primary;
-	    border-left: 93px solid transparent;
-	}
-
 	&__wrapper {
 		display: flex;
 		justify-content: center;
