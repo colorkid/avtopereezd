@@ -1,0 +1,93 @@
+.features {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+     	padding: 60px 0 100px 0;
+	}
+
+	&__title {
+		width: 100%;
+		margin-bottom: 70px; 
+		text-align: center;
+	}
+
+	&__item {
+		display: flex;
+		width: 100%;
+		max-width: 480px;
+		margin: 20px 0;
+	}
+
+	&__pic {
+	  	min-width: 75px;
+		height: 75px;
+		margin-right: 20px;
+		border-radius: 2px;
+	    background-color: $crem;
+     	background-repeat: no-repeat;
+		background-size: 65%;
+		background-position: center;
+		
+		&--fast-reaction {
+			background-image: url(images/components/features/runer-silhouette-running-fast.svg);
+		}
+
+		&--fast-food-time {
+			background-image: url(images/components/features/molecular-configuration.svg);
+		}
+
+		&--liability-insurance {
+			background-image: url(images/components/features/protection-symbol-of-opened-umbrella-silhouette-under-raindrops.svg);
+		}
+
+		&--experenced {
+			background-image: url(images/components/features/verification-of-delivery-list-clipboard-symbol.svg);
+		}
+
+		&--control {
+			background-image: url(images/components/features/settings-work-tool.svg);
+		}
+
+		&--price {
+			background-image: url(images/components/features/quality.svg);
+		}
+	}
+
+	&__name {
+		margin: 0 0 5px 0;
+	}
+
+	&__description {
+    	margin: 0;
+	}
+
+	&:before {
+	    content: "";
+	    position: absolute;
+	    bottom: 0;
+	    right: 15px;
+	    width: 0;
+	    height: 0;
+	    border-left: 75px solid transparent;
+	    border-right: 75px solid transparent;
+	    border-bottom: 112.5px solid $primary;
+	}
+
+	&:after {
+	    content: "";
+	    position: absolute;
+	    bottom: 0;
+	    right: 120px;
+	    width: 0;
+	    height: 0;
+	    border-left: 56.25px solid transparent;
+	    border-right: 52.5px solid transparent;
+	    border-bottom: 82.5px solid $accent;
+	}
+}
