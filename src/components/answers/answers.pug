@@ -1,4 +1,9 @@
-section.answers(id="answers")
-	div.wrapper
-		div.answers__wrapper
-			h2.answers__title Ответы на вопросы
+mixin answers(arr)
+	section.answers(id="answers")
+		div.wrapper
+			div.answers__wrapper
+				h2.answers__title Ответы на вопросы
+				each item, index in arr
+					div.answer
+						div.answer__title= item[0]
+						div.answer__answer= item[1]

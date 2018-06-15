@@ -1,34 +1,11 @@
-section.features(id="features")
-	div.wrapper
-		div.features__wrapper
-			h2.features__title Преимущества
-			div.features__item
-				div.features__pic.features__pic--fast-reaction
-				div.features__txt
-					h3.features__name Быстрое реагирование
-					p.features__description Минимальный промежуток времени между звонком и началом работ.
-			div.features__item
-				div.features__pic.features__pic--fast-food-time
-				div.features__txt
-					h3.features__name В ногу со временем
-					p.features__description Компания использует современные логистические решения.
-			div.features__item
-				div.features__pic.features__pic--liability-insurance
-				div.features__txt
-					h3.features__name Страхование ответственности
-					p.features__description Страхование вашего имущества до 10  миллионов тенге.
-			div.features__item
-				div.features__pic.features__pic--experenced
-				div.features__txt
-					h3.features__name Опытные сотрудники и надежный автотранспорт
-					p.features__description Весь персонал квалифицирован.
-			div.features__item
-				div.features__pic.features__pic--control
-				div.features__txt
-					h3.features__name Контроль перевозки
-					p.features__description За каждой услугой закреплен менеджер, ведется наблюдение за передвижением груза и контроль за погрузкой и разгрузкой.
-			div.features__item
-				div.features__pic.features__pic--price
-				div.features__txt
-					h3.features__name Цена/Качество
-					p.features__description Лучшее соотношение средней цены и высокого качества услуг.
+mixin features(arr)
+	section.features(id="features")
+		div.wrapper
+			div.features__wrapper
+				h2.features__title Преимущества
+				each item, index in arr
+					div.features__item
+						div(class= item[2])
+						div.features__txt
+							h3.features__name= item[0]
+							p.features__description= item[1]
