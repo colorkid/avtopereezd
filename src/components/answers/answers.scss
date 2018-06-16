@@ -16,4 +16,51 @@
 		margin-bottom: 70px; 
 		text-align: center;
 	}
+
+}
+
+.answer {
+	width: 100%;
+	padding: 20px 0 0 22.5px;
+    border-bottom: 1px dotted darken($crem, 15%);
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+
+    	.answer__title {
+    		color: $accent;
+    	}
+    }
+
+    &--open {
+    	padding-bottom: 20px;
+
+    	&:before {
+    		transform: rotate(90deg);
+    	}
+    }
+
+    &:before {
+    	content: "";
+    	position: absolute;
+    	top: 25px;
+    	left: 0;
+    	width: 15px;
+    	height: 15px;
+    	background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center;
+		background-image: url(images/components/answers/last-track-left-arrow.svg);
+		transition: 0.3s;
+    }
+
+    &__title {
+    	margin: 0 0 20px;
+    }
+
+    &__description {
+    	line-height: 1.5;
+    }
 }

@@ -5,5 +5,5 @@ mixin answers(arr)
 				h2.answers__title Ответы на вопросы
 				each item, index in arr
 					div.answer
-						div.answer__title= item[0]
-						div.answer__answer= item[1]
+						h3.answer__title= item[0]
+						div.answer__description= item[1]
