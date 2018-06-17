@@ -1,0 +1,8 @@
+mixin portfolio(arr)
+	section.portfolio(id="portfolio")
+		div.wrapper
+			div.portfolio__wrapper
+				h2.portfolio__title Клиенты
+				each item, index in arr
+					div.portfolio__pic
+						img(src= item, alt= item, class="portfolio__imge")

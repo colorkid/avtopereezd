@@ -1,6 +1,6 @@
 $black: #333;
 $primary: #01A89E;
-$crem: #F3F3F3;
+$crem: #f5f5f5;
 $accent: #FFA802;
 
 input,
@@ -121,3 +121,5 @@ main {
 @import "../../components/features/features";
 @import "../../components/calculator/calculator";
 @import "../../components/answers/answers";
+@import "../../components/portfolio/portfolio";
+@import "../../components/reviews/reviews";
