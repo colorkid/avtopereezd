@@ -21,3 +21,17 @@
     	margin: 45px 0;
 	}
 }
+
+@media (max-width: 1024px) {
+	.portfolio {
+
+		&__wrapper {
+			flex-direction: column;
+    		align-items: center;
+		}
+
+		&__pic {
+			width: 250px;
+		}
+	}
+}
