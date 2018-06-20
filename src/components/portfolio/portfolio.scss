@@ -6,6 +6,7 @@
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 		flex-wrap: wrap;
      	padding: 60px 0 100px 0;
 	}
@@ -17,7 +18,11 @@
 	}
 
 	&__pic {
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
 		width: calc(25% - 45px);
+		height: 125px;
     	margin: 45px 0;
 	}
 }
