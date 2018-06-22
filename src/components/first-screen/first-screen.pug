@@ -2,12 +2,15 @@ mixin firstScreen(title, slogan, trigger)
 	section.first-screen
 		div.wrapper
 			div.first-screen__wrapper
-				div.first-screen__logo
-					img(src="images/components/first-screen/logo_itog_1.png" alt="Avtoperevozchik логистическая компания")
-					div.first-screen__slogan
-						span=slogan[0]
-						span=slogan[1]
-						span=slogan[2]
+				div.first-screen__wrapper-logo-foto
+					div.first-screen__logo
+						img(src="images/components/first-screen/logo_itog.png" alt="Avtoperevozchik логистическая компания")
+						div.first-screen__slogan
+							span=slogan[0]
+							span=slogan[1]
+							span=slogan[2]
+					div.first-screen__foto
+						img(src="images/components/first-screen/shab.jpg" alt="Avtoperevozchik логистическая компания")
 				div.first-screen__top
 					h1.first-screen__title=title
 				div.first-screen__middle
