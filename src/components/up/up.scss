@@ -1,0 +1,13 @@
+.up-arrow {
+	width: 35px;
+	height: 35px;
+	position: fixed;
+	bottom: 35px;
+	right: 35px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 35px;
+	background-image: url(images/components/up/next.svg);
+	cursor: pointer;
+	transform: rotate(-90deg);
+}

@@ -82,6 +82,13 @@
     		height: 100%;
     	}
     }
+
+    &__time {
+    	margin-top: 50px;
+    	font-size: 30px;
+    	font-family: "HelveticaBold";
+    	color: $primary;
+    }
 }
 
 .trigger-form {
@@ -131,6 +138,10 @@
 			background-color: darken($primary, 10%);
 		}
 	}
+}
+
+.first-view-port {
+	height: 800px;
 }
 
 

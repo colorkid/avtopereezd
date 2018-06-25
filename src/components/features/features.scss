@@ -92,6 +92,32 @@
 	}
 }
 
+.feature-smile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 20px;
+
+	&__pic {
+		min-width: 75px;
+		height: 75px;
+		margin-right: 20px;
+		border-radius: 2px;
+	    background-repeat: no-repeat;
+		background-size: 65%;
+		background-position: center;
+		background-image: url(images/components/features/smiling-emoticon-square-face.svg);
+	}
+
+
+	&__txt {
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+}
+
 @media (max-width: 1024px) {
 	.features {
 
