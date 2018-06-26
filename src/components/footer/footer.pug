@@ -1,2 +1,18 @@
-footer footer
+footer.footer
+	div.wrapper
+		div.footer__wrapper
+			h2.footer__title Контакты
+			div.footer__no-wrap
+				div.map 
+					script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A94f0fc7bf52b08093fd6a22f1154a2ffdff00f59382b4797e0a1583de9097d9a&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true")
+				div.company-info
+					div.company-info__row.company-info__row--tel 8 (727) 354-66-03; 8 (727) 254-66-03
+					div.company-info__row.company-info__row--email avtoperevozchik.kz@mail.ru
+					div.company-info__row.company-info__row--map 050007, Республика Казахстан, г. Алматы, Медеуский район, ул. Добролюбова, 47а
+					div.company-info__row.company-info__row--docs
+						p ТОО «Логистическая компания «Avtoperevozchik»
+						p БИН - 180540007773
+						p Банк АФ АО «Казкоммерцбанк»
+						p ИКК (р/с) - 123456
 	include ../../components/up/up.pug
+	include ../../components/popup/popup.pug

@@ -36,6 +36,7 @@ $('.answer').click(function(){
     }, 500);
   }
 })();
+
 $('.up-arrow').fadeOut(0);
 
 $(function() {

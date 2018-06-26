@@ -1,7 +1,7 @@
 @import "../fonts/fonts";
 
 $black: #333;
-$primary: #f40000;
+$primary: #DF0415;
 $crem: #fafafa;
 $accent: #fafafa;
 
@@ -126,3 +126,5 @@ main {
 @import "../../components/portfolio/portfolio";
 @import "../../components/reviews/reviews";
 @import "../../components/up/up";
+@import "../../components/footer/footer";
+@import "../../components/popup/popup";

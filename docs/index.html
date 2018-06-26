@@ -85,12 +85,12 @@
                     <div class="workers__item">
                       <div class="workers__pic"><img src="images/components/about-company/letov.jpg" alt="Летов Евгений"></div>
                       <div class="workers__position">Менеджер</div>
-                      <div class="workers__name">Летов Евгений</div>
+                      <div class="workers__name">Евгений Летов</div>
                     </div>
                     <div class="workers__item">
                       <div class="workers__pic"><img src="images/components/about-company/ejov.jpg" alt="Ежов Александр"></div>
                       <div class="workers__position">Менеджер</div>
-                      <div class="workers__name">Ежов Александр</div>
+                      <div class="workers__name">Александр Ежов</div>
                     </div>
                   </div>
                 </div>
@@ -285,8 +285,39 @@
             </div>
           </section>
     </main>
-    <footer>footer
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__wrapper">
+          <h2 class="footer__title">Контакты</h2>
+          <div class="footer__no-wrap">
+            <div class="map"> 
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A94f0fc7bf52b08093fd6a22f1154a2ffdff00f59382b4797e0a1583de9097d9a&amp;amp;width=500&amp;amp;height=400&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+            </div>
+            <div class="company-info">
+              <div class="company-info__row company-info__row--tel">8 (727) 354-66-03; 8 (727) 254-66-03</div>
+              <div class="company-info__row company-info__row--email">avtoperevozchik.kz@mail.ru</div>
+              <div class="company-info__row company-info__row--map">050007, Республика Казахстан, г. Алматы, Медеуский район, ул. Добролюбова, 47а</div>
+              <div class="company-info__row company-info__row--docs">
+                <p>ТОО «Логистическая компания «Avtoperevozchik»</p>
+                <p>БИН - 180540007773</p>
+                <p>Банк АФ АО «Казкоммерцбанк»</p>
+                <p>ИКК (р/с) - 123456</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="up-arrow"></div>
+      <div class="popup">
+        <form class="popup__form" action="/">
+          <div class="popup__form__trigger"></div>
+          <div class="popup__form__wrapper">
+            <input class="popup__form__input input-field" type="text" name="name" placeholder="Ваше имя">
+            <input class="popup__form__input input-field" type="tel" name="tel" placeholder="+7 (___) ___-__-__" title="Формат: +7 (096) 999 99 99" required>
+            <input class="popup__form__button button" type="submit" value="Заказать">
+          </div>
+        </form>
+      </div>
     </footer>
     <script type="text/javascript" src="bundle.js"></script>
   </body>
