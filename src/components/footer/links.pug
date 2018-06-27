@@ -1,0 +1,6 @@
+mixin links(arr)
+	div.links
+		h3.links__title Другие услуги:
+		div.links__wrapper
+			each item, index in arr
+				a.links__item(href=item[1])=item[0]

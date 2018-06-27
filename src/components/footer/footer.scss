@@ -27,11 +27,18 @@
 }
 
 .map {
-
+	
+	&--xs {
+		display: none;
+	}
 }
 
 .company-info {
 	padding: 0 0 0 30px;
+
+	&__title {
+		margin-top: 0;
+	}
 
 	&__row {
 		margin: 20px 0;
@@ -39,10 +46,76 @@
 		font-size: 14px;
 		background-size: 15px;
     	background-repeat: no-repeat;
-		background-image: url("images/components/footer/wassap-logo-button.svg");
+
+		&--tel {
+			background-image: url("images/components/footer/wassap-logo-button.svg");
+		}
+
+		&--email {
+			background-image: url("images/components/footer/email-envelope-outline-shape-with-rounded-corners.svg");
+		}
+
+		&--map {
+			background-image: url("images/components/footer/placeholder.svg");
+		}
+
+		&--docs {
+			background-image: url("images/components/footer/info.svg");
+		}
 	}
 
 	p {
 		margin: 2.5px 0;
+	}
+}
+
+.links {
+	margin: 40px 0 0 0;
+
+	&__item {
+		font-size: 14px;
+		padding-right: 7.5px;
+		color: #fff;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.footer {
+
+		&__no-wrap {
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+
+	.company-info {
+		text-align: left;
+    	width: 100%;
+    	max-width: 500px;
+    	margin-top: 20px;
+		padding-left: 0;
+	}
+
+}
+
+@media (max-width: 768px) {
+	
+}
+
+@media (max-width: 600px) {
+.map {
+
+		&--md {
+			display: none;
+		}
+
+		&--xs {
+			display: block;
+		}
 	}
 }

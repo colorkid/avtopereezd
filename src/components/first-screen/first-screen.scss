@@ -5,6 +5,7 @@
 	position: relative;
 	background-color: $crem;
 	overflow: hidden;
+	border-bottom: 1px solid darken($crem, 5%);
 
 	&__wrapper {
 		display: flex;
@@ -142,7 +143,10 @@
 }
 
 .first-view-port {
-	height: 100vh;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	height: 87.5vh;
 }
 
 
@@ -182,6 +186,11 @@
 		    }
 		}
 
+	}
+
+	.first-view-port {
+		display: block;
+		height: auto;
 	}
 
 }
