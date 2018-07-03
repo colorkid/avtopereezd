@@ -30,7 +30,7 @@
 <a href="#calculator" class="main-menu__link">Цены</a>
 </li>
 <li class="main-menu__item">
-<a href="#portfolio" class="main-menu__link">Объекты</a>
+<a href="#portfolio" class="main-menu__link">Клиенты</a>
 </li>
 <li class="main-menu__item">
 <a href="#reviews" class="main-menu__link">Отзывы</a>
@@ -213,7 +213,89 @@
           <section class="calculator" id="calculator">
             <div class="wrapper animated">
               <div class="calculator__wrapper">
-                <h2 class="calculator__title">Цены</h2>
+                <h2 class="calculator__title">Калькулятор
+                  <form class="calc">
+                    <div class="calc__row">
+                      <div class="calc__cell">
+                        <label class="calc__label">Откуда:</label>
+                        <select class="calc__select">
+                          <option class="calc__option" value="a1">Алматы</option>
+                          <option class="calc__option" value="a2">Астана</option>
+                          <option class="calc__option" value="a3">Актау</option>
+                          <option class="calc__option" value="a4">Атырау</option>
+                          <option class="calc__option" value="a5">Актобе</option>
+                          <option class="calc__option" value="a6">Уральск</option>
+                          <option class="calc__option" value="a7">Петропавловск</option>
+                          <option class="calc__option" value="a8">Костанай</option>
+                          <option class="calc__option" value="a9">Кокшетау</option>
+                          <option class="calc__option" value="a10">Семей</option>
+                          <option class="calc__option" value="a11">Оскемен</option>
+                          <option class="calc__option" value="a12">Павлодар</option>
+                          <option class="calc__option" value="a13">Караганда</option>
+                          <option class="calc__option" value="a14">Жезказган</option>
+                          <option class="calc__option" value="a15">Балхаш</option>
+                          <option class="calc__option" value="a16">Тараз</option>
+                          <option class="calc__option" value="a17">Шымкент</option>
+                          <option class="calc__option" value="a18">Кызыл-Орда</option>
+                          <option class="calc__option" value="a19">Талдыкорган</option>
+                        </select>
+                      </div>
+                      <div class="calc__cell">
+                        <label class="calc__label">Куда:</label>
+                        <select class="calc__select">
+                          <option class="calc__option" value="a1">Алматы</option>
+                          <option class="calc__option" value="a2">Астана</option>
+                          <option class="calc__option" value="a3">Актау</option>
+                          <option class="calc__option" value="a4">Атырау</option>
+                          <option class="calc__option" value="a5">Актобе</option>
+                          <option class="calc__option" value="a6">Уральск</option>
+                          <option class="calc__option" value="a7">Петропавловск</option>
+                          <option class="calc__option" value="a8">Костанай</option>
+                          <option class="calc__option" value="a9">Кокшетау</option>
+                          <option class="calc__option" value="a10">Семей</option>
+                          <option class="calc__option" value="a11">Оскемен</option>
+                          <option class="calc__option" value="a12">Павлодар</option>
+                          <option class="calc__option" value="a13">Караганда</option>
+                          <option class="calc__option" value="a14">Жезказган</option>
+                          <option class="calc__option" value="a15">Балхаш</option>
+                          <option class="calc__option" value="a16">Тараз</option>
+                          <option class="calc__option" value="a17">Шымкент</option>
+                          <option class="calc__option" value="a18">Кызыл-Орда</option>
+                          <option class="calc__option" value="a19">Талдыкорган</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="calc__row">
+                      <div class="calc__cell">
+                        <div class="calc__label">Вес, кг:
+                          <input class="calc__field calc__field--number" type="number" value="0">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="calc__row">
+                      <div class="calc__cell">
+                        <div class="calc__label calc__label--checkbox">Страхование?
+                          <input class="calc__checkbox" type="checkbox">
+                        </div>
+                      </div>
+                      <div class="calc__cell">
+                        <div class="calc__label">Сумма страхования:
+                          <input class="calc__field calc__field--number" type="number" value="0">
+                        </div>
+                      </div>
+                      <div class="calc__cell">
+                        <div class="calc__label">Стоимость страхования:</div>
+                        <div class="calc__insurance-value">333 т.</div>
+                      </div>
+                    </div>
+                    <div class="calc__row">
+                      <div class="calc__cell">
+                        <div class="calc__label">Итого стоимость:</div>
+                        <div class="calc__all-total-cost">13134 т.</div>
+                      </div>
+                    </div>
+                  </form>
+                </h2>
               </div>
             </div>
           </section>
