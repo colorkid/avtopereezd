@@ -213,89 +213,105 @@
           <section class="calculator" id="calculator">
             <div class="wrapper animated">
               <div class="calculator__wrapper">
-                <h2 class="calculator__title">Калькулятор
-                  <form class="calc">
-                    <div class="calc__row">
-                      <div class="calc__cell">
-                        <label class="calc__label">Откуда:</label>
-                        <select class="calc__select">
-                          <option class="calc__option" value="a1">Алматы</option>
-                          <option class="calc__option" value="a2">Астана</option>
-                          <option class="calc__option" value="a3">Актау</option>
-                          <option class="calc__option" value="a4">Атырау</option>
-                          <option class="calc__option" value="a5">Актобе</option>
-                          <option class="calc__option" value="a6">Уральск</option>
-                          <option class="calc__option" value="a7">Петропавловск</option>
-                          <option class="calc__option" value="a8">Костанай</option>
-                          <option class="calc__option" value="a9">Кокшетау</option>
-                          <option class="calc__option" value="a10">Семей</option>
-                          <option class="calc__option" value="a11">Оскемен</option>
-                          <option class="calc__option" value="a12">Павлодар</option>
-                          <option class="calc__option" value="a13">Караганда</option>
-                          <option class="calc__option" value="a14">Жезказган</option>
-                          <option class="calc__option" value="a15">Балхаш</option>
-                          <option class="calc__option" value="a16">Тараз</option>
-                          <option class="calc__option" value="a17">Шымкент</option>
-                          <option class="calc__option" value="a18">Кызыл-Орда</option>
-                          <option class="calc__option" value="a19">Талдыкорган</option>
-                        </select>
-                      </div>
-                      <div class="calc__cell">
-                        <label class="calc__label">Куда:</label>
-                        <select class="calc__select">
-                          <option class="calc__option" value="a1">Алматы</option>
-                          <option class="calc__option" value="a2">Астана</option>
-                          <option class="calc__option" value="a3">Актау</option>
-                          <option class="calc__option" value="a4">Атырау</option>
-                          <option class="calc__option" value="a5">Актобе</option>
-                          <option class="calc__option" value="a6">Уральск</option>
-                          <option class="calc__option" value="a7">Петропавловск</option>
-                          <option class="calc__option" value="a8">Костанай</option>
-                          <option class="calc__option" value="a9">Кокшетау</option>
-                          <option class="calc__option" value="a10">Семей</option>
-                          <option class="calc__option" value="a11">Оскемен</option>
-                          <option class="calc__option" value="a12">Павлодар</option>
-                          <option class="calc__option" value="a13">Караганда</option>
-                          <option class="calc__option" value="a14">Жезказган</option>
-                          <option class="calc__option" value="a15">Балхаш</option>
-                          <option class="calc__option" value="a16">Тараз</option>
-                          <option class="calc__option" value="a17">Шымкент</option>
-                          <option class="calc__option" value="a18">Кызыл-Орда</option>
-                          <option class="calc__option" value="a19">Талдыкорган</option>
-                        </select>
-                      </div>
+                <h2 class="calculator__title">Калькулятор</h2>
+                <form class="calc" id="app" v-on:change="calculateTheCost">
+                  <div class="calc__row">
+                    <div class="calc__cell">
+                      <label class="calc__label">Откуда:</label>
+                      <select class="calc__select" v-model="from">
+                        <option class="calc__option" value="0">Алматы</option>
+                        <option class="calc__option" value="1">Астана</option>
+                        <option class="calc__option" value="2">Актау</option>
+                        <option class="calc__option" value="3">Атырау</option>
+                        <option class="calc__option" value="4">Актобе</option>
+                        <option class="calc__option" value="5">Уральск</option>
+                        <option class="calc__option" value="6">Петропавловск</option>
+                        <option class="calc__option" value="7">Костанай</option>
+                        <option class="calc__option" value="8">Кокшетау</option>
+                        <option class="calc__option" value="9">Семей</option>
+                        <option class="calc__option" value="10">Оскемен</option>
+                        <option class="calc__option" value="11">Павлодар</option>
+                        <option class="calc__option" value="12">Караганда</option>
+                        <option class="calc__option" value="13">Жезказган</option>
+                        <option class="calc__option" value="14">Балхаш</option>
+                        <option class="calc__option" value="15">Тараз</option>
+                        <option class="calc__option" value="16">Шымкент</option>
+                        <option class="calc__option" value="17">Кызыл-Орда</option>
+                        <option class="calc__option" value="18">Талдыкорган</option>
+                      </select>
                     </div>
-                    <div class="calc__row">
-                      <div class="calc__cell">
-                        <div class="calc__label">Вес, кг:
-                          <input class="calc__field calc__field--number" type="number" value="0">
-                        </div>
-                      </div>
+                    <div class="calc__cell">
+                      <label class="calc__label">Куда:</label>
+                      <select class="calc__select" v-model="to">
+                        <option class="calc__option" value="0">Алматы</option>
+                        <option class="calc__option" value="1">Астана</option>
+                        <option class="calc__option" value="2">Актау</option>
+                        <option class="calc__option" value="3">Атырау</option>
+                        <option class="calc__option" value="4">Актобе</option>
+                        <option class="calc__option" value="5">Уральск</option>
+                        <option class="calc__option" value="6">Петропавловск</option>
+                        <option class="calc__option" value="7">Костанай</option>
+                        <option class="calc__option" value="8">Кокшетау</option>
+                        <option class="calc__option" value="9">Семей</option>
+                        <option class="calc__option" value="10">Оскемен</option>
+                        <option class="calc__option" value="11">Павлодар</option>
+                        <option class="calc__option" value="12">Караганда</option>
+                        <option class="calc__option" value="13">Жезказган</option>
+                        <option class="calc__option" value="14">Балхаш</option>
+                        <option class="calc__option" value="15">Тараз</option>
+                        <option class="calc__option" value="16">Шымкент</option>
+                        <option class="calc__option" value="17">Кызыл-Орда</option>
+                        <option class="calc__option" value="18">Талдыкорган</option>
+                      </select>
                     </div>
-                    <div class="calc__row">
-                      <div class="calc__cell">
-                        <div class="calc__label calc__label--checkbox">Страхование?
-                          <input class="calc__checkbox" type="checkbox">
-                        </div>
-                      </div>
-                      <div class="calc__cell">
-                        <div class="calc__label">Сумма страхования:
-                          <input class="calc__field calc__field--number" type="number" value="0">
-                        </div>
-                      </div>
-                      <div class="calc__cell">
-                        <div class="calc__label">Стоимость страхования:</div>
-                        <div class="calc__insurance-value">333 т.</div>
-                      </div>
+                  </div>
+                  <div class="calc__row">
+                    <div class="calc__cell">
+                      <div class="calc__label">Вес, кг:</div>
+                      <input class="calc__field calc__field--number" type="number" v-model="weight">
                     </div>
-                    <div class="calc__row">
-                      <div class="calc__cell">
-                        <div class="calc__label">Итого стоимость:</div>
-                        <div class="calc__all-total-cost">13134 т.</div>
-                      </div>
+                    <div class="calc__cell">
+                      <div class="calc__label">Длина, см:</div>
+                      <input class="calc__field calc__field--number" type="number" v-model="length">
                     </div>
-                  </form>
-                </h2>
+                    <div class="calc__cell">
+                      <div class="calc__label">Ширина, см:</div>
+                      <input class="calc__field calc__field--number" type="number" v-model="width">
+                    </div>
+                    <div class="calc__cell">
+                      <div class="calc__label">Высота, см:</div>
+                      <input class="calc__field calc__field--number" type="number" v-model="height">
+                    </div>
+                  </div>
+                  <div class="calc__row">
+                    <div class="calc__cell">
+                      <div class="calc__label">Количество мест:</div>
+                      <input class="calc__field calc__field--number" type="number" value="1">
+                    </div>
+                  </div>
+                  <div class="calc__row">
+                    <div class="calc__cell">
+                      <div class="calc__label calc__label--checkbox">Страхование?</div>
+                      <input class="calc__checkbox" type="checkbox" id="insurance">
+                    </div>
+                  </div>
+                  <div class="calc__row calc__row--insurance calc__row--hide">
+                    <div class="calc__cell">
+                      <div class="calc__label">Сумма страхования:</div>
+                      <input class="calc__field calc__field--number" type="number" v-model="insurance">
+                    </div>
+                    <div class="calc__cell">
+                      <div class="calc__label">Стоимость страхования:</div>
+                      <div class="calc__insurance-value">{{ sumofinsurance }} т.</div>
+                    </div>
+                  </div>
+                  <div class="calc__row">
+                    <div class="calc__cell">
+                      <div class="calc__label">Итого стоимость:</div>
+                      <div class="calc__all-total-cost">{{ result }}</div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </section>
