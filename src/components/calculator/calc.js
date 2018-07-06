@@ -27,7 +27,7 @@ var app = new Vue({
 		[67,94,143,138,138,134,125,125,125,103,103,125,98,143,103,112,112,116,"-"]
 	],
 	from: 0,
-	to: 5,
+	to: 1,
 	weight: 1,
 	length: 0,
 	width: 0,
@@ -35,7 +35,8 @@ var app = new Vue({
 	volumeWeight: 0,
 	result: true,
 	insurance: 0,
-	sumofinsurance: 0
+	sumofinsurance: 0,
+	numberOfPackages: 1
   },
 
   created: function () {
@@ -51,10 +52,10 @@ var app = new Vue({
     	this.calculateInsurance();
     	this.calculateVolumeWeight();
 
-    	let value = this.dataCitys[this.from][this.to] * (this.weight > this.volumeWeight ? this.weight : this.volumeWeight);
+    	let value = (this.dataCitys[this.from][this.to] * (this.weight > this.volumeWeight ? this.weight : this.volumeWeight)) * this.numberOfPackages;
     	
     	if(isNumeric(value) === true) {
-    		this.result = `${value} т.`;
+    		this.result = value;
     	} else {
     		this.result = "Одинаковый город";
     	}
@@ -64,10 +65,4 @@ var app = new Vue({
     	this.sumofinsurance = Math.round((this.insurance * 0.35 / 100) * 100) / 100;
     }
   }
-});
-
-$('.calc__row--hide').slideFadeToggle('slow');
-
-$('#insurance').click(function(){
-    $(".calc__row--hide").slideFadeToggle('slow');
 });

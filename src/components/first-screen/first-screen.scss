@@ -3,9 +3,24 @@
 	justify-content: center;
 	width: 100%;
 	position: relative;
-	background-color: $crem;
+	//background-color: $crem;
+	background-position: center 10%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(images/components/first-screen/shab3.jpg);
 	overflow: hidden;
 	border-bottom: 1px solid darken($crem, 5%);
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: transparentize($crem, 0.4);
+	}
 
 	&__wrapper {
 		display: flex;

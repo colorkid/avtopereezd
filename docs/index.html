@@ -56,7 +56,9 @@
                       <div class="first-screen__slogan"><span>Что?</span><span>Куда?</span><span>Когда?</span></div>
                       <div class="first-screen__time">24/7</div>
                     </div>
-                    <div class="first-screen__foto"><img src="images/components/first-screen/shab.jpg" alt="Avtoperevozchik логистическая компания"></div>
+                    <div class="first-screen__foto">
+                      <!--img(src="images/components/first-screen/shab3.jpg" alt="Avtoperevozchik логистическая компания")-->
+                    </div>
                   </div>
                   <div class="first-screen__top">
                     <h1 class="first-screen__title">Грузоперевозки Алматы &amp; Международные перевозки</h1>
@@ -267,48 +269,48 @@
                   </div>
                   <div class="calc__row">
                     <div class="calc__cell">
-                      <div class="calc__label">Вес, кг:</div>
+                      <label class="calc__label">Вес, кг:</label>
                       <input class="calc__field calc__field--number" type="number" v-model="weight">
                     </div>
                     <div class="calc__cell">
-                      <div class="calc__label">Длина, см:</div>
+                      <label class="calc__label">Длина, см:</label>
                       <input class="calc__field calc__field--number" type="number" v-model="length">
                     </div>
                     <div class="calc__cell">
-                      <div class="calc__label">Ширина, см:</div>
+                      <label class="calc__label">Ширина, см:</label>
                       <input class="calc__field calc__field--number" type="number" v-model="width">
                     </div>
                     <div class="calc__cell">
-                      <div class="calc__label">Высота, см:</div>
+                      <label class="calc__label">Высота, см:</label>
                       <input class="calc__field calc__field--number" type="number" v-model="height">
                     </div>
                   </div>
                   <div class="calc__row">
                     <div class="calc__cell">
                       <div class="calc__label">Количество мест:</div>
-                      <input class="calc__field calc__field--number" type="number" value="1">
+                      <input class="calc__field calc__field--number" type="number" V-model="numberOfPackages">
                     </div>
                   </div>
                   <div class="calc__row">
-                    <div class="calc__cell">
-                      <div class="calc__label calc__label--checkbox">Страхование?</div>
+                    <div class="calc__cell calc__cell--no-wrap">
+                      <label class="calc__label calc__label--checkbox" for="insurance">Страхование?</label>
                       <input class="calc__checkbox" type="checkbox" id="insurance">
                     </div>
                   </div>
                   <div class="calc__row calc__row--insurance calc__row--hide">
                     <div class="calc__cell">
-                      <div class="calc__label">Сумма страхования:</div>
+                      <label class="calc__label">Сумма страхования:</label>
                       <input class="calc__field calc__field--number" type="number" v-model="insurance">
                     </div>
                     <div class="calc__cell">
                       <div class="calc__label">Стоимость страхования:</div>
-                      <div class="calc__insurance-value">{{ sumofinsurance }} т.</div>
+                      <div class="calc__insurance-value"><span class="calc__money-value">{{ sumofinsurance }}</span><span class="calc__money-currency">₸</span></div>
                     </div>
                   </div>
                   <div class="calc__row">
                     <div class="calc__cell">
                       <div class="calc__label">Итого стоимость:</div>
-                      <div class="calc__all-total-cost">{{ result }}</div>
+                      <div class="calc__all-total-cost"><span class="calc__money-value">{{ result }}</span><span class="calc__money-currency">₸</span></div>
                     </div>
                   </div>
                 </form>
@@ -377,7 +379,7 @@
                 </div>
                 <div class="answer">
                   <h3 class="answer__title">Что такое негабаритный груз?</h3>
-                  <div class="answer__description">Негабаритный груз - это груз, длина одного места которого не превышает 5 м,ширина не превышает 3м, высота груза не превышает 2 м, вес составляет более 1 000 кг.</div>
+                  <div class="answer__description">Негабаритный груз - это груз, длина одного места которого не превышает 5 м, ширина не превышает 3м, высота груза не превышает 2 м, вес составляет более 1 000 кг.</div>
                 </div>
               </div>
             </div>
