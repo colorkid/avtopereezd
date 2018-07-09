@@ -3,11 +3,11 @@
 	justify-content: center;
 	width: 100%;
 	position: relative;
-	//background-color: $crem;
-	background-position: center 10%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-image: url(images/components/first-screen/shab3.jpg);
+	background-color: $crem;
+	//background-position: center 10%;
+	//background-repeat: no-repeat;
+	//background-size: cover;
+	//background-image: url(images/components/first-screen/shab3.jpg);
 	overflow: hidden;
 	border-bottom: 1px solid darken($crem, 5%);
 	position: relative;
@@ -162,6 +162,18 @@
     flex-direction: column;
     justify-content: center;
 	height: 87.5vh;
+}
+
+.slogan-spec {
+
+	.first-screen__slogan span:first-child {
+		margin-top: 10px;
+		transform: rotate(0);
+	}
+
+	.first-screen__time {
+		margin-top: 65px;
+	}
 }
 
 
