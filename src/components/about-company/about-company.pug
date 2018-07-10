@@ -1,4 +1,4 @@
-mixin aboutCompany(abouttxt, nameOfCompany, callToAction)
+mixin aboutCompany(abouttxt, nameOfCompany, callToAction, triggerWords)
 	section.about-company(id="about-company")
 		div.wrapper.animated
 			div.about-company__wrapper
@@ -21,13 +21,13 @@ mixin aboutCompany(abouttxt, nameOfCompany, callToAction)
 					div.facts
 						h3.facts__title Факты о Логистической компании Avtoperevozchik
 						div.facts__item.facts__item--experence
-							div.facts__txt Сотрудники компании имеют опыт грузо-перевозочных услуг с 2010 года.
+							div.facts__txt=triggerWords[0]
 						div.facts__item.facts__item--collective
-							div.facts__txt Штат компании более 25 сотрудников.
+							div.facts__txt=triggerWords[1]
 						div.facts__item.facts__item--cars
-							div.facts__txt Наш автопарк состоит из 10 грузовых автомобилей.
+							div.facts__txt=triggerWords[2]
 						div.facts__item.facts__item--storage
-							div.facts__txt Наша компания обеспечена теплыми и холодными складскими помещениями.
+							div.facts__txt=triggerWords[3]
 					div.about-company__footer
 						form(class="about-company-form", action="/form.php", method="post")
 							div.about-company-form__trigger=callToAction

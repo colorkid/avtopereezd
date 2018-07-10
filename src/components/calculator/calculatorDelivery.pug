@@ -1,82 +1,87 @@
-form(class="calc", id="app", v-on:change="calculateTheCost")
-	div.calc__row
-		div.calc__cell
-			label.calc__label Откуда:
-			select(class="calc__select", v-model="from")
-				option(class="calc__option", value="0") Алматы
-				option(class="calc__option", value="1") Астана
-				option(class="calc__option", value="2") Актау
-				option(class="calc__option", value="3") Атырау
-				option(class="calc__option", value="4") Актобе
-				option(class="calc__option", value="5") Уральск
-				option(class="calc__option", value="6") Петропавловск
-				option(class="calc__option", value="7") Костанай
-				option(class="calc__option", value="8") Кокшетау
-				option(class="calc__option", value="9") Семей
-				option(class="calc__option", value="10") Оскемен
-				option(class="calc__option", value="11") Павлодар
-				option(class="calc__option", value="12") Караганда
-				option(class="calc__option", value="13") Жезказган
-				option(class="calc__option", value="14") Балхаш
-				option(class="calc__option", value="15") Тараз
-				option(class="calc__option", value="16") Шымкент
-				option(class="calc__option", value="17") Кызыл-Орда
-				option(class="calc__option", value="18") Талдыкорган
-		div.calc__cell
-			label.calc__label Куда:
-			select(class="calc__select", v-model="to")
-				option(class="calc__option", value="0") Алматы
-				option(class="calc__option", value="1") Астана
-				option(class="calc__option", value="2") Актау
-				option(class="calc__option", value="3") Атырау
-				option(class="calc__option", value="4") Актобе
-				option(class="calc__option", value="5") Уральск
-				option(class="calc__option", value="6") Петропавловск
-				option(class="calc__option", value="7") Костанай
-				option(class="calc__option", value="8") Кокшетау
-				option(class="calc__option", value="9") Семей
-				option(class="calc__option", value="10") Оскемен
-				option(class="calc__option", value="11") Павлодар
-				option(class="calc__option", value="12") Караганда
-				option(class="calc__option", value="13") Жезказган
-				option(class="calc__option", value="14") Балхаш
-				option(class="calc__option", value="15") Тараз
-				option(class="calc__option", value="16") Шымкент
-				option(class="calc__option", value="17") Кызыл-Орда
-				option(class="calc__option", value="18") Талдыкорган
-	div.calc__row
-		div.calc__cell
-			label.calc__label Вес, кг:
-			input(type="number", class="calc__field calc__field--number", v-model="weight")
-		div.calc__cell
-			label.calc__label Длина, см:
-			input(type="number", class="calc__field calc__field--number", v-model="length")
-		div.calc__cell
-			label.calc__label Ширина, см:
-			input(type="number", class="calc__field calc__field--number", v-model="width")
-		div.calc__cell
-			label.calc__label Высота, см:
-			input(type="number", class="calc__field calc__field--number", v-model="height")
-	div.calc__row
-		div.calc__cell
-			div.calc__label Количество мест:
-			input(type="number", class="calc__field calc__field--number", V-model="numberOfPackages")
-	div.calc__row
-		div.calc__cell.calc__cell--no-wrap
-			label.calc__label.calc__label--checkbox(for="insurance") Страхование?
-			input(type="checkbox", class="calc__checkbox", id="insurance")
-	div.calc__row.calc__row--insurance.calc__row--hide
-		div.calc__cell
-			label.calc__label Сумма страхования:
-			input(type="number", class="calc__field calc__field--number", v-model="insurance")
-		div.calc__cell
-			div.calc__label Стоимость страхования:
-			div.calc__insurance-value
-				span.calc__money-value {{ sumofinsurance }}
-				span.calc__money-currency ₸
-	div.calc__row
-		div.calc__cell
-			div.calc__label Итого стоимость:
-			div.calc__all-total-cost
-				span.calc__money-value {{ result }}
-				span.calc__money-currency ₸
+section.calculator(id="calculator")
+			div.wrapper.animated
+				div.calculator__wrapper
+					h2.calculator__title Калькулятор
+					div.calculator-info.calculator__margin-top40
+					form(class="calc", id="app", v-on:change="calculateTheCost")
+						div.calc__row
+							div.calc__cell
+								label.calc__label Откуда:
+								select(class="calc__select", v-model="from")
+									option(class="calc__option", value="0") Алматы
+									option(class="calc__option", value="1") Астана
+									option(class="calc__option", value="2") Актау
+									option(class="calc__option", value="3") Атырау
+									option(class="calc__option", value="4") Актобе
+									option(class="calc__option", value="5") Уральск
+									option(class="calc__option", value="6") Петропавловск
+									option(class="calc__option", value="7") Костанай
+									option(class="calc__option", value="8") Кокшетау
+									option(class="calc__option", value="9") Семей
+									option(class="calc__option", value="10") Оскемен
+									option(class="calc__option", value="11") Павлодар
+									option(class="calc__option", value="12") Караганда
+									option(class="calc__option", value="13") Жезказган
+									option(class="calc__option", value="14") Балхаш
+									option(class="calc__option", value="15") Тараз
+									option(class="calc__option", value="16") Шымкент
+									option(class="calc__option", value="17") Кызыл-Орда
+									option(class="calc__option", value="18") Талдыкорган
+							div.calc__cell
+								label.calc__label Куда:
+								select(class="calc__select", v-model="to")
+									option(class="calc__option", value="0") Алматы
+									option(class="calc__option", value="1") Астана
+									option(class="calc__option", value="2") Актау
+									option(class="calc__option", value="3") Атырау
+									option(class="calc__option", value="4") Актобе
+									option(class="calc__option", value="5") Уральск
+									option(class="calc__option", value="6") Петропавловск
+									option(class="calc__option", value="7") Костанай
+									option(class="calc__option", value="8") Кокшетау
+									option(class="calc__option", value="9") Семей
+									option(class="calc__option", value="10") Оскемен
+									option(class="calc__option", value="11") Павлодар
+									option(class="calc__option", value="12") Караганда
+									option(class="calc__option", value="13") Жезказган
+									option(class="calc__option", value="14") Балхаш
+									option(class="calc__option", value="15") Тараз
+									option(class="calc__option", value="16") Шымкент
+									option(class="calc__option", value="17") Кызыл-Орда
+									option(class="calc__option", value="18") Талдыкорган
+						div.calc__row
+							div.calc__cell
+								label.calc__label Вес, кг:
+								input(type="number", class="calc__field calc__field--number", v-model="weight")
+							div.calc__cell
+								label.calc__label Длина, см:
+								input(type="number", class="calc__field calc__field--number", v-model="length")
+							div.calc__cell
+								label.calc__label Ширина, см:
+								input(type="number", class="calc__field calc__field--number", v-model="width")
+							div.calc__cell
+								label.calc__label Высота, см:
+								input(type="number", class="calc__field calc__field--number", v-model="height")
+						div.calc__row
+							div.calc__cell
+								div.calc__label Количество мест:
+								input(type="number", class="calc__field calc__field--number", V-model="numberOfPackages")
+						div.calc__row
+							div.calc__cell.calc__cell--no-wrap
+								label.calc__label.calc__label--checkbox(for="insurance") Страхование?
+								input(type="checkbox", class="calc__checkbox", id="insurance")
+						div.calc__row.calc__row--insurance.calc__row--hide
+							div.calc__cell
+								label.calc__label Сумма страхования:
+								input(type="number", class="calc__field calc__field--number", v-model="insurance")
+							div.calc__cell
+								div.calc__label Стоимость страхования:
+								div.calc__insurance-value
+									span.calc__money-value {{ sumofinsurance }}
+									span.calc__money-currency ₸
+						div.calc__row
+							div.calc__cell
+								div.calc__label Итого стоимость:
+								div.calc__all-total-cost
+									span.calc__money-value {{ result }}
+									span.calc__money-currency ₸

@@ -1,11 +1,8 @@
 mixin calculator(arr)
-	section.calculator(id="calculator")
+	section.calculator.calculator--info
 			div.wrapper.animated
-				div.calculator__wrapper
-					h2.calculator__title Калькулятор
-					include calculatorDelivery.pug
-					div.calculator-info.calculator__margin-top40
-						h3.calculator-info__title Информация
-						ul.calculator-info__ul
-							each item, index in arr
-								li.calculator-info__item= item
+				div.calculator__wrapper.calculator__wrapper--info
+					h3.calculator-info__title Информация
+					ul.calculator-info__ul
+						each item, index in arr
+							li.calculator-info__item= item

@@ -3,14 +3,22 @@
 	justify-content: center;
 	width: 100%;
 	background-color: $crem;
-	border-bottom: 1px solid darken($crem, 5%);
 	border-top: 1px solid darken($crem, 5%);
+
+	&--info {
+		border-top: 0;
+		border-bottom: 1px solid darken($crem, 5%);
+	}
 
 	&__wrapper {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-     	padding: 60px 0 100px 0;
+     	padding: 60px 0 0 0;
+
+     	&--info {
+     		padding: 40px 0 100px 0
+     	}
 	}
 
 	&__title {
@@ -53,6 +61,15 @@
     	&--border-bottom-no {
     		border-bottom: 0;
     	}
+
+    	&--bold {
+			font-weight: 600;
+		}
+
+		&--name {
+			text-transform: uppercase;
+			font-weight: 600;
+		}
 	}
 	
 	&__label {

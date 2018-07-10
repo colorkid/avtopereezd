@@ -44,14 +44,12 @@
 			background-position: 12.5px 0;
 			background-repeat: no-repeat;
 			background-size: 75px;
-			//opacity: 0;
 		}
 
 		&:nth-child(1) {
 
 			&:before {
 				background-image: url(images/components/road-map/talking-by-phone-auricular-symbol-with-speech-bubble.svg);
-				//animation: showone 3s infinite linear;
 			}
 		}
 
@@ -59,7 +57,6 @@
 			
 			&:before {
 				background-image: url(images/components/road-map/logistics-delivery-truck-in-movement.svg);
-				//animation: showtwo 3s infinite linear;
 			}
 		}
 
@@ -67,7 +64,13 @@
 			
 			&:before {
 				background-image: url(images/components/road-map/packages-transportation-on-a-truck.svg);
-				//animation: showthree 3s infinite linear;
+			}
+		}
+
+		&:nth-child(4) {
+			
+			&:before {
+				background-image: url(images/components/road-map/work-finish.svg);
 			}
 		}
 	}

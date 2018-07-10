@@ -210,127 +210,132 @@
               </div>
             </div>
           </section>
-          <section class="calculator" id="calculator">
-            <div class="wrapper animated">
-              <div class="calculator__wrapper">
-                <h2 class="calculator__title">Калькулятор</h2>
-                <form class="calc" id="app" v-on:change="calculateTheCost">
-                  <div class="calc__row">
-                    <div class="calc__cell">
-                      <label class="calc__label">Откуда:</label>
-                      <select class="calc__select" v-model="from">
-                        <option class="calc__option" value="0">Алматы</option>
-                        <option class="calc__option" value="1">Астана</option>
-                        <option class="calc__option" value="2">Актау</option>
-                        <option class="calc__option" value="3">Атырау</option>
-                        <option class="calc__option" value="4">Актобе</option>
-                        <option class="calc__option" value="5">Уральск</option>
-                        <option class="calc__option" value="6">Петропавловск</option>
-                        <option class="calc__option" value="7">Костанай</option>
-                        <option class="calc__option" value="8">Кокшетау</option>
-                        <option class="calc__option" value="9">Семей</option>
-                        <option class="calc__option" value="10">Оскемен</option>
-                        <option class="calc__option" value="11">Павлодар</option>
-                        <option class="calc__option" value="12">Караганда</option>
-                        <option class="calc__option" value="13">Жезказган</option>
-                        <option class="calc__option" value="14">Балхаш</option>
-                        <option class="calc__option" value="15">Тараз</option>
-                        <option class="calc__option" value="16">Шымкент</option>
-                        <option class="calc__option" value="17">Кызыл-Орда</option>
-                        <option class="calc__option" value="18">Талдыкорган</option>
-                      </select>
-                    </div>
-                    <div class="calc__cell">
-                      <label class="calc__label">Куда:</label>
-                      <select class="calc__select" v-model="to">
-                        <option class="calc__option" value="0">Алматы</option>
-                        <option class="calc__option" value="1">Астана</option>
-                        <option class="calc__option" value="2">Актау</option>
-                        <option class="calc__option" value="3">Атырау</option>
-                        <option class="calc__option" value="4">Актобе</option>
-                        <option class="calc__option" value="5">Уральск</option>
-                        <option class="calc__option" value="6">Петропавловск</option>
-                        <option class="calc__option" value="7">Костанай</option>
-                        <option class="calc__option" value="8">Кокшетау</option>
-                        <option class="calc__option" value="9">Семей</option>
-                        <option class="calc__option" value="10">Оскемен</option>
-                        <option class="calc__option" value="11">Павлодар</option>
-                        <option class="calc__option" value="12">Караганда</option>
-                        <option class="calc__option" value="13">Жезказган</option>
-                        <option class="calc__option" value="14">Балхаш</option>
-                        <option class="calc__option" value="15">Тараз</option>
-                        <option class="calc__option" value="16">Шымкент</option>
-                        <option class="calc__option" value="17">Кызыл-Орда</option>
-                        <option class="calc__option" value="18">Талдыкорган</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="calc__row">
-                    <div class="calc__cell">
-                      <label class="calc__label">Вес, кг:</label>
-                      <input class="calc__field calc__field--number" type="number" v-model="weight">
-                    </div>
-                    <div class="calc__cell">
-                      <label class="calc__label">Длина, см:</label>
-                      <input class="calc__field calc__field--number" type="number" v-model="length">
-                    </div>
-                    <div class="calc__cell">
-                      <label class="calc__label">Ширина, см:</label>
-                      <input class="calc__field calc__field--number" type="number" v-model="width">
-                    </div>
-                    <div class="calc__cell">
-                      <label class="calc__label">Высота, см:</label>
-                      <input class="calc__field calc__field--number" type="number" v-model="height">
-                    </div>
-                  </div>
-                  <div class="calc__row">
-                    <div class="calc__cell">
-                      <div class="calc__label">Количество мест:</div>
-                      <input class="calc__field calc__field--number" type="number" V-model="numberOfPackages">
-                    </div>
-                  </div>
-                  <div class="calc__row">
-                    <div class="calc__cell calc__cell--no-wrap">
-                      <label class="calc__label calc__label--checkbox" for="insurance">Страхование?</label>
-                      <input class="calc__checkbox" type="checkbox" id="insurance">
-                    </div>
-                  </div>
-                  <div class="calc__row calc__row--insurance calc__row--hide">
-                    <div class="calc__cell">
-                      <label class="calc__label">Сумма страхования:</label>
-                      <input class="calc__field calc__field--number" type="number" v-model="insurance">
-                    </div>
-                    <div class="calc__cell">
-                      <div class="calc__label">Стоимость страхования:</div>
-                      <div class="calc__insurance-value"><span class="calc__money-value">{{ sumofinsurance }}</span><span class="calc__money-currency">₸</span></div>
-                    </div>
-                  </div>
-                  <div class="calc__row">
-                    <div class="calc__cell">
-                      <div class="calc__label">Итого стоимость:</div>
-                      <div class="calc__all-total-cost"><span class="calc__money-value">{{ result }}</span><span class="calc__money-currency">₸</span></div>
-                    </div>
-                  </div>
-                </form>
-                <div class="calculator-info calculator__margin-top40">
-                  <h3 class="calculator-info__title">Информация</h3>
-                  <ul class="calculator-info__ul">
-                    <li class="calculator-info__item">Калькулятор дает предварительный расчет, окончательную стоимость определит менеджер.</li>
-                    <li class="calculator-info__item">Минимальная сумма заказа 5 500 тенге.</li>
-                    <li class="calculator-info__item">К стоимости применяется топливная надбавка 10%.</li>
-                    <li class="calculator-info__item">Все тарифы не включают в себя НДС.</li>
-                    <li class="calculator-info__item">За вес отправления принимается наибольший параметр физического или объемного весов. Объемный вес рассчитывается по формуле: (Длина (см) * Ширина (см) * Высота (см)) / 6000.</li>
-                    <li class="calculator-info__item">Если производилась дополнительная упаковка, то тариф рассчитывается с учетом веса упаковки.</li>
-                    <li class="calculator-info__item">За транспортировку негабаритного груза, к тарифам применяются повышающие коэффициенты. За транспортировку негабаритного груза, к тарифам применяется повышающий коэффициент 1,5.</li>
-                    <li class="calculator-info__item">Негабаритный груз - это груз, длина одного места которого не превышает 1,2 м, ширина не превышает 1 м, высота груза не превышает 1,5 м, вес составляет более 150 кг.</li>
-                    <li class="calculator-info__item">Разгрузочно-погрузочные работы обеспечивает Заказчик (Грузоотправитель/Грузополучатель).</li>
-                    <li class="calculator-info__item">Груз принимается по количеству мест, без пересчета внутренних вложений.</li>
-                    <li class="calculator-info__item">Услуга возврата товаросопроводительных документов Заказчику – 2 000 тенге.</li>
-                    <li class="calculator-info__item">Прием груза с проверкой внутренних вложений - тариф увеличивается на 100%.</li>
-                    <li class="calculator-info__item">Услуги Авторефрижератора и полного Фрахта рассчитываются индивидуально.</li>
-                    <li class="calculator-info__item">Международные перевозки рассчитываются индивидуально.</li>
-                  </ul>
+      <section class="calculator" id="calculator">
+        <div class="wrapper animated">
+          <div class="calculator__wrapper">
+            <h2 class="calculator__title">Калькулятор</h2>
+            <div class="calculator-info calculator__margin-top40"></div>
+            <form class="calc" id="app" v-on:change="calculateTheCost">
+              <div class="calc__row">
+                <div class="calc__cell">
+                  <label class="calc__label">Откуда:</label>
+                  <select class="calc__select" v-model="from">
+                    <option class="calc__option" value="0">Алматы</option>
+                    <option class="calc__option" value="1">Астана</option>
+                    <option class="calc__option" value="2">Актау</option>
+                    <option class="calc__option" value="3">Атырау</option>
+                    <option class="calc__option" value="4">Актобе</option>
+                    <option class="calc__option" value="5">Уральск</option>
+                    <option class="calc__option" value="6">Петропавловск</option>
+                    <option class="calc__option" value="7">Костанай</option>
+                    <option class="calc__option" value="8">Кокшетау</option>
+                    <option class="calc__option" value="9">Семей</option>
+                    <option class="calc__option" value="10">Оскемен</option>
+                    <option class="calc__option" value="11">Павлодар</option>
+                    <option class="calc__option" value="12">Караганда</option>
+                    <option class="calc__option" value="13">Жезказган</option>
+                    <option class="calc__option" value="14">Балхаш</option>
+                    <option class="calc__option" value="15">Тараз</option>
+                    <option class="calc__option" value="16">Шымкент</option>
+                    <option class="calc__option" value="17">Кызыл-Орда</option>
+                    <option class="calc__option" value="18">Талдыкорган</option>
+                  </select>
                 </div>
+                <div class="calc__cell">
+                  <label class="calc__label">Куда:</label>
+                  <select class="calc__select" v-model="to">
+                    <option class="calc__option" value="0">Алматы</option>
+                    <option class="calc__option" value="1">Астана</option>
+                    <option class="calc__option" value="2">Актау</option>
+                    <option class="calc__option" value="3">Атырау</option>
+                    <option class="calc__option" value="4">Актобе</option>
+                    <option class="calc__option" value="5">Уральск</option>
+                    <option class="calc__option" value="6">Петропавловск</option>
+                    <option class="calc__option" value="7">Костанай</option>
+                    <option class="calc__option" value="8">Кокшетау</option>
+                    <option class="calc__option" value="9">Семей</option>
+                    <option class="calc__option" value="10">Оскемен</option>
+                    <option class="calc__option" value="11">Павлодар</option>
+                    <option class="calc__option" value="12">Караганда</option>
+                    <option class="calc__option" value="13">Жезказган</option>
+                    <option class="calc__option" value="14">Балхаш</option>
+                    <option class="calc__option" value="15">Тараз</option>
+                    <option class="calc__option" value="16">Шымкент</option>
+                    <option class="calc__option" value="17">Кызыл-Орда</option>
+                    <option class="calc__option" value="18">Талдыкорган</option>
+                  </select>
+                </div>
+              </div>
+              <div class="calc__row">
+                <div class="calc__cell">
+                  <label class="calc__label">Вес, кг:</label>
+                  <input class="calc__field calc__field--number" type="number" v-model="weight">
+                </div>
+                <div class="calc__cell">
+                  <label class="calc__label">Длина, см:</label>
+                  <input class="calc__field calc__field--number" type="number" v-model="length">
+                </div>
+                <div class="calc__cell">
+                  <label class="calc__label">Ширина, см:</label>
+                  <input class="calc__field calc__field--number" type="number" v-model="width">
+                </div>
+                <div class="calc__cell">
+                  <label class="calc__label">Высота, см:</label>
+                  <input class="calc__field calc__field--number" type="number" v-model="height">
+                </div>
+              </div>
+              <div class="calc__row">
+                <div class="calc__cell">
+                  <div class="calc__label">Количество мест:</div>
+                  <input class="calc__field calc__field--number" type="number" V-model="numberOfPackages">
+                </div>
+              </div>
+              <div class="calc__row">
+                <div class="calc__cell calc__cell--no-wrap">
+                  <label class="calc__label calc__label--checkbox" for="insurance">Страхование?</label>
+                  <input class="calc__checkbox" type="checkbox" id="insurance">
+                </div>
+              </div>
+              <div class="calc__row calc__row--insurance calc__row--hide">
+                <div class="calc__cell">
+                  <label class="calc__label">Сумма страхования:</label>
+                  <input class="calc__field calc__field--number" type="number" v-model="insurance">
+                </div>
+                <div class="calc__cell">
+                  <div class="calc__label">Стоимость страхования:</div>
+                  <div class="calc__insurance-value"><span class="calc__money-value">{{ sumofinsurance }}</span><span class="calc__money-currency">₸</span></div>
+                </div>
+              </div>
+              <div class="calc__row">
+                <div class="calc__cell">
+                  <div class="calc__label">Итого стоимость:</div>
+                  <div class="calc__all-total-cost"><span class="calc__money-value">{{ result }}</span><span class="calc__money-currency">₸</span></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+          <section class="calculator calculator--info">
+            <div class="wrapper animated">
+              <div class="calculator__wrapper calculator__wrapper--info">
+                <h3 class="calculator-info__title">Информация</h3>
+                <ul class="calculator-info__ul">
+                  <li class="calculator-info__item">Калькулятор дает предварительный расчет, окончательную стоимость определит менеджер.</li>
+                  <li class="calculator-info__item">Минимальная сумма заказа 5 500 тенге.</li>
+                  <li class="calculator-info__item">К стоимости применяется топливная надбавка 10%.</li>
+                  <li class="calculator-info__item">Все тарифы не включают в себя НДС.</li>
+                  <li class="calculator-info__item">За вес отправления принимается наибольший параметр физического или объемного весов. Объемный вес рассчитывается по формуле: (Длина (см) * Ширина (см) * Высота (см)) / 6000.</li>
+                  <li class="calculator-info__item">Если производилась дополнительная упаковка, то тариф рассчитывается с учетом веса упаковки.</li>
+                  <li class="calculator-info__item">За транспортировку негабаритного груза, к тарифам применяются повышающие коэффициенты. За транспортировку негабаритного груза, к тарифам применяется повышающий коэффициент 1,5.</li>
+                  <li class="calculator-info__item">Негабаритный груз - это груз, длина одного места которого не превышает 1,2 м, ширина не превышает 1 м, высота груза не превышает 1,5 м, вес составляет более 150 кг.</li>
+                  <li class="calculator-info__item">Разгрузочно-погрузочные работы обеспечивает Заказчик (Грузоотправитель/Грузополучатель).</li>
+                  <li class="calculator-info__item">Груз принимается по количеству мест, без пересчета внутренних вложений.</li>
+                  <li class="calculator-info__item">Услуга возврата товаросопроводительных документов Заказчику – 2 000 тенге.</li>
+                  <li class="calculator-info__item">Прием груза с проверкой внутренних вложений - тариф увеличивается на 100%.</li>
+                  <li class="calculator-info__item">Услуги Авторефрижератора и полного Фрахта рассчитываются индивидуально.</li>
+                  <li class="calculator-info__item">Международные перевозки рассчитываются индивидуально.</li>
+                </ul>
               </div>
             </div>
           </section>
