@@ -55,14 +55,14 @@ var app = new Vue({
     	let value = (this.dataCitys[this.from][this.to] * (this.weight > this.volumeWeight ? this.weight : this.volumeWeight)) * this.numberOfPackages;
     	
     	if(isNumeric(value) === true) {
-    		this.result = value;
+    		this.result = String(value).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
     	} else {
     		this.result = "Одинаковый город";
     	}
     },
 
     calculateInsurance() {
-    	this.sumofinsurance = Math.round((this.insurance * 0.35 / 100) * 100) / 100;
+    	this.sumofinsurance = String(Math.round((this.insurance * 0.35 / 100) * 100) / 100).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
     }
   }
 });

@@ -25,18 +25,15 @@ var app = new Vue({
   },
 
   methods: {
-  
-
     calculateTheCost() {
     	this.gazsum = this.gaz * 2500;
 	  	this.moversum = this.mover * 3000;
 	  	this.furnituremansum = this.furnitureman * 2000;
 	  	this.packmansum = this.packman * 1500;
-	  	this.supervaizersum = this.supervaizer * 4000;
+	  	this.supervaizersum = this.supervaizer * 2000;
 	  	this.allsum = this.gazsum + this.moversum + this.furnituremansum + this.packmansum + this.supervaizersum;
+	  	this.allsum = String(this.allsum).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
     }
-
-    
   }
 });
 

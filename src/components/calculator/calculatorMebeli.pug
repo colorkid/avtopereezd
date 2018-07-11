@@ -2,42 +2,62 @@ section.calculator(id="calculator")
 	div.wrapper.animated
 		div.calculator__wrapper
 			h2.calculator__title Калькулятор
-			form(class="calc", id="appMebel", v-on:change="calculateTheCost")
+			form(class="calc", id="appMebel", v-on:change="calculateTheCost" v-on:click="calculateTheCost")
 				div.calc__row
-					div.calc__cell.calc__cell--name Наименование
-					div.calc__cell.calc__cell--name Количество часов
-					div.calc__cell.calc__cell--name Цена за час
-					div.calc__cell.calc__cell--name Стоимость
+					div.calc__cell.calc__cell--name.calc__cell--lg Наименование
+					div.calc__cell.calc__cell--name.calc__cell--lg Количество часов
+					div.calc__cell.calc__cell--name.calc__cell--lg Цена за час
+					div.calc__cell.calc__cell--name.calc__cell--lg Стоимость
 				div.calc__row
 					div.calc__cell.calc__cell--bold Газель (1,5 т)
 					div.calc__cell
-						input(type="number", class="calc__field calc__field--number", v-model="gaz")
-					div.calc__cell 2500 ₸
-					div.calc__cell {{ gazsum }} ₸
+						input(type="number", min=0 class="calc__field calc__field--number", v-model="gaz")
+					div.calc__cell
+						span.word-xs Цена за час -
+						span 2500 ₸
+					div.calc__cell 
+						span.word-xs Стоимость -
+						span {{ gazsum }} ₸
 				div.calc__row
 					div.calc__cell.calc__cell--bold Грузчики, 2 человека:
 					div.calc__cell
-						input(type="number", class="calc__field calc__field--number", v-model="mover")
-					div.calc__cell 3000 ₸
-					div.calc__cell {{ moversum }} ₸
+						input(type="number", min=0 class="calc__field calc__field--number", v-model="mover")
+					div.calc__cell
+						span.word-xs Цена за час -
+						span 3000 ₸
+					div.calc__cell
+						span.word-xs Стоимость -
+						span {{ moversum }} ₸
 				div.calc__row
 					div.calc__cell.calc__cell--bold Мебельщик:
 					div.calc__cell
-						input(type="number", class="calc__field calc__field--number", v-model="furnitureman")
-					div.calc__cell 2000 ₸
-					div.calc__cell {{ furnituremansum }} ₸
+						input(type="number", min=0 class="calc__field calc__field--number", v-model="furnitureman")
+					div.calc__cell
+						span.word-xs Цена за час -
+						span 2000 ₸
+					div.calc__cell 
+						span.word-xs Стоимость -
+						span {{ furnituremansum }} ₸
 				div.calc__row
 					div.calc__cell.calc__cell--bold Упаковщик:
 					div.calc__cell
-						input(type="number", class="calc__field calc__field--number", v-model="packman")
-					div.calc__cell 1500 ₸
-					div.calc__cell {{ packmansum }} ₸
+						input(type="number", min=0 class="calc__field calc__field--number", v-model="packman")
+					div.calc__cell
+						span.word-xs Цена за час -
+						span 1500 ₸
+					div.calc__cell 
+						span.word-xs Стоимость -
+						span {{ packmansum }} ₸
 				div.calc__row
 					div.calc__cell.calc__cell--bold Супервайзер:
 					div.calc__cell
-						input(type="number", class="calc__field calc__field--number", v-model="supervaizer")
-					div.calc__cell 2000 ₸
-					div.calc__cell {{ supervaizersum }} ₸
+						input(type="number", min=0 class="calc__field calc__field--number", v-model="supervaizer")
+					div.calc__cell
+						span.word-xs Цена за час -
+						span 2000 ₸
+					div.calc__cell 
+						span.word-xs Стоимость -
+						span {{ supervaizersum }} ₸
 				div.calc__row
 					div.calc__cell.calc__cell--name Общая стоимость:
 					div.calc__cell

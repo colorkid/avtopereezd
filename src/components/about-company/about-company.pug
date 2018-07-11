@@ -1,4 +1,4 @@
-mixin aboutCompany(abouttxt, nameOfCompany, callToAction, triggerWords)
+mixin aboutCompany(abouttxt, nameOfCompany, callToAction, whatiscompany, triggerWords)
 	section.about-company(id="about-company")
 		div.wrapper.animated
 			div.about-company__wrapper
@@ -19,7 +19,7 @@ mixin aboutCompany(abouttxt, nameOfCompany, callToAction, triggerWords)
 				div.about-company__right
 					div.about-company__txt=abouttxt
 					div.facts
-						h3.facts__title Факты о Логистической компании Avtoperevozchik
+						h3.facts__title=whatiscompany
 						div.facts__item.facts__item--experence
 							div.facts__txt=triggerWords[0]
 						div.facts__item.facts__item--collective

@@ -97,7 +97,7 @@
                 <div class="about-company__right">
                   <div class="about-company__txt">Мувинговая компания &quot;Avtopereezd&quot; работает на рынке мувинговых услуг с 2013 года. За это время мы организовали более 500 переездов квартир и офисов, а также более 1 000 перевозок по Республике Казахстан и по праву заслужили репутацию молодого и надежного партнера. Мувинг (от англ. Moving — переезд) — профессиональные услуги по организации процесса перевозки и хранения вещей в период переезда (из квартиры в квартиру, из офиса в офис и т. п.).</div>
                   <div class="facts">
-                    <h3 class="facts__title">Факты о Логистической компании Avtoperevozchik</h3>
+                    <h3 class="facts__title">Факты о Мувинговой компании Avtopereezd</h3>
                     <div class="facts__item facts__item--experence">
                       <div class="facts__txt">Сотрудники компании имеют опыт мувинговых и грузо-перевозочных услуг с 2010 года.</div>
                     </div>
@@ -222,52 +222,52 @@
         <div class="wrapper animated">
           <div class="calculator__wrapper">
             <h2 class="calculator__title">Калькулятор</h2>
-            <form class="calc" id="appMebel" v-on:change="calculateTheCost">
+            <form class="calc" id="appMebel" v-on:change="calculateTheCost" v-on:click="calculateTheCost">
               <div class="calc__row">
-                <div class="calc__cell calc__cell--name">Наименование</div>
-                <div class="calc__cell calc__cell--name">Количество часов</div>
-                <div class="calc__cell calc__cell--name">Цена за час</div>
-                <div class="calc__cell calc__cell--name">Стоимость</div>
+                <div class="calc__cell calc__cell--name calc__cell--lg">Наименование</div>
+                <div class="calc__cell calc__cell--name calc__cell--lg">Количество часов</div>
+                <div class="calc__cell calc__cell--name calc__cell--lg">Цена за час</div>
+                <div class="calc__cell calc__cell--name calc__cell--lg">Стоимость</div>
               </div>
               <div class="calc__row">
                 <div class="calc__cell calc__cell--bold">Газель (1,5 т)</div>
                 <div class="calc__cell">
-                  <input class="calc__field calc__field--number" type="number" v-model="gaz">
+                  <input class="calc__field calc__field--number" type="number" min="0" v-model="gaz">
                 </div>
-                <div class="calc__cell">2500 ₸</div>
-                <div class="calc__cell">{{ gazsum }} ₸</div>
+                <div class="calc__cell"><span class="word-xs">Цена за час -</span><span>2500 ₸</span></div>
+                <div class="calc__cell"> <span class="word-xs">Стоимость -</span><span>{{ gazsum }} ₸</span></div>
               </div>
               <div class="calc__row">
                 <div class="calc__cell calc__cell--bold">Грузчики, 2 человека:</div>
                 <div class="calc__cell">
-                  <input class="calc__field calc__field--number" type="number" v-model="mover">
+                  <input class="calc__field calc__field--number" type="number" min="0" v-model="mover">
                 </div>
-                <div class="calc__cell">3000 ₸</div>
-                <div class="calc__cell">{{ moversum }} ₸</div>
+                <div class="calc__cell"><span class="word-xs">Цена за час -</span><span>3000 ₸</span></div>
+                <div class="calc__cell"><span class="word-xs">Стоимость -</span><span>{{ moversum }} ₸</span></div>
               </div>
               <div class="calc__row">
                 <div class="calc__cell calc__cell--bold">Мебельщик:</div>
                 <div class="calc__cell">
-                  <input class="calc__field calc__field--number" type="number" v-model="furnitureman">
+                  <input class="calc__field calc__field--number" type="number" min="0" v-model="furnitureman">
                 </div>
-                <div class="calc__cell">2000 ₸</div>
-                <div class="calc__cell">{{ furnituremansum }} ₸</div>
+                <div class="calc__cell"><span class="word-xs">Цена за час -</span><span>2000 ₸</span></div>
+                <div class="calc__cell"> <span class="word-xs">Стоимость -</span><span>{{ furnituremansum }} ₸</span></div>
               </div>
               <div class="calc__row">
                 <div class="calc__cell calc__cell--bold">Упаковщик:</div>
                 <div class="calc__cell">
-                  <input class="calc__field calc__field--number" type="number" v-model="packman">
+                  <input class="calc__field calc__field--number" type="number" min="0" v-model="packman">
                 </div>
-                <div class="calc__cell">1500 ₸</div>
-                <div class="calc__cell">{{ packmansum }} ₸</div>
+                <div class="calc__cell"><span class="word-xs">Цена за час -</span><span>1500 ₸</span></div>
+                <div class="calc__cell"> <span class="word-xs">Стоимость -</span><span>{{ packmansum }} ₸</span></div>
               </div>
               <div class="calc__row">
                 <div class="calc__cell calc__cell--bold">Супервайзер:</div>
                 <div class="calc__cell">
-                  <input class="calc__field calc__field--number" type="number" v-model="supervaizer">
+                  <input class="calc__field calc__field--number" type="number" min="0" v-model="supervaizer">
                 </div>
-                <div class="calc__cell">2000 ₸</div>
-                <div class="calc__cell">{{ supervaizersum }} ₸</div>
+                <div class="calc__cell"><span class="word-xs">Цена за час -</span><span>2000 ₸</span></div>
+                <div class="calc__cell"> <span class="word-xs">Стоимость -</span><span>{{ supervaizersum }} ₸</span></div>
               </div>
               <div class="calc__row">
                 <div class="calc__cell calc__cell--name">Общая стоимость:</div>
@@ -285,7 +285,7 @@
                 <h3 class="calculator-info__title">Информация</h3>
                 <ul class="calculator-info__ul">
                   <li class="calculator-info__item">Калькулятор дает предварительный расчет, окончательную стоимость определит менеджер.</li>
-                  <li class="calculator-info__item">Минимальная сумма заказа 5 000 тенге.</li>
+                  <li class="calculator-info__item">Минимальная сумма заказа 7500 тенге.</li>
                   <li class="calculator-info__item">Исполнитель вправе повысить стоимость или увеличить количество рейсов машин из-за сильно тяжелого груза, неудобств для работы, несоответствия объему работ.</li>
                   <li class="calculator-info__item">Мастер по сборке/разборке мебели (Мебельщик) необходим при перевозке крупногабаритной,  хрупкой, комбинированной со стеклом мебели.</li>
                   <li class="calculator-info__item">Упаковщик необходим для упаковки  хрупких (стекло, посуда, мебель, бытовая техника и т.д) предметов при транспортировке.</li>
@@ -378,7 +378,7 @@
             <div class="company-info">
               <h3 class="company-info__title">Реквизиты:</h3>
               <div class="company-info__row company-info__row--tel">8 (727) 354-66-03; 8 (727) 254-66-03</div>
-              <div class="company-info__row company-info__row--email">avtoperevozchik.kz@mail.ru</div>
+              <div class="company-info__row company-info__row--email">info@avtopereezd.kz</div>
               <div class="company-info__row company-info__row--map">050007, Республика Казахстан, г. Алматы, Медеуский район, ул. Добролюбова, 47а</div>
               <div class="company-info__row company-info__row--docs">
                 <p>ТОО «Логистическая компания «Avtoperevozchik»</p>

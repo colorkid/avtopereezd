@@ -121,6 +121,18 @@ main {
 	z-index: 1;
 }
 
+.word-xs {
+	display: none;
+}
+
+@media (max-width: 1024px) {
+	.word-xs {
+		display: inline-block;
+		padding: 0 3px 0 0;
+		font-size: 14px;
+	}
+}
+
 @import "../../components/header/header";
 @import "../../components/first-screen/first-screen";
 @import "../../components/about-company/about-company";

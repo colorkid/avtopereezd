@@ -176,6 +176,17 @@
 			justify-content: center;
 			margin: 0;
 			text-align: center;
+
+			&--lg {
+				display: none;
+			}
+		}
+	}
+
+	.calculator-info {
+
+		&__ul {
+			padding: 0 15px;
 		}
 	}
 }
