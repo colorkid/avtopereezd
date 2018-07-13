@@ -17,20 +17,16 @@ $('.answer').click(function(){
     $(this).children(".answer__description").slideFadeToggle('slow');
     $(this).toggleClass("answer--open");
 });
-function isNumeric(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-}
-
 if(document.querySelector("#appMebel")) {
 
 var app = new Vue({
   el: '#appMebel',
   data: {
-  	gaz: 0,
-  	mover: 0,
+  	gaz: 1,
+  	mover: 1,
   	furnitureman: 0,
   	packman: 0,
-  	supervaizer: 0,
+  	supervaizer: 1,
   	gazsum: Number,
   	moversum: Number,
   	furnituremansum: Number,
@@ -51,7 +47,16 @@ var app = new Vue({
 	  	this.packmansum = this.packman * 1500;
 	  	this.supervaizersum = this.supervaizer * 2000;
 	  	this.allsum = this.gazsum + this.moversum + this.furnituremansum + this.packmansum + this.supervaizersum;
-	  	this.allsum = String(this.allsum).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+
+      if (this.allsum < 7500) {
+        this.allsum = 7500;
+      }
+    }
+  },
+
+  filters: {
+    discharges: function (value) {
+      return String(value).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
     }
   }
 });
@@ -59,10 +64,40 @@ var app = new Vue({
 }
 
 
+if(document.querySelector("#appPereezd")) {
+
+var app = new Vue({
+  el: '#appPereezd',
+  data: {
+    result: 0,
+    typeofrealestate: 0,
+    pack: false,
+    valuerange: 10
+  },
+
+  created: function () {
+  	this.calculateTheCost();
+  },
+
+  methods: {
+    calculateTheCost() {
+      this.result = this.typeofrealestate * this.valuerange * (this.pack === false ? 1 : 1.43);
+    }
+  },
+
+  filters: {
+    discharges: function (value) {
+      return String(value).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+    }
+  }
+});
+
+}
 function isNumeric(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
+if(document.querySelector("#app")) {
 var app = new Vue({
   el: '#app',
   data: {
@@ -116,17 +151,24 @@ var app = new Vue({
     	let value = (this.dataCitys[this.from][this.to] * (this.weight > this.volumeWeight ? this.weight : this.volumeWeight)) * this.numberOfPackages;
     	
     	if(isNumeric(value) === true) {
-    		this.result = String(value).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+    		this.result = value;
     	} else {
     		this.result = "Одинаковый город";
     	}
     },
 
     calculateInsurance() {
-    	this.sumofinsurance = String(Math.round((this.insurance * 0.35 / 100) * 100) / 100).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+    	this.sumofinsurance = Math.round((this.insurance * 0.35 / 100) * 100) / 100;
+    }
+  },
+
+  filters: {
+    discharges: function (value) {
+      return String(value).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
     }
   }
 });
+}
 if($('.calc__row.calc__row--insurance.calc__row--hide').length !== 0){
 	$('.calc__row.calc__row--insurance.calc__row--hide').slideFadeToggle('slow');
 }

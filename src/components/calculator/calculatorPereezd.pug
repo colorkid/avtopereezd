@@ -1,0 +1,25 @@
+section.calculator(id="calculator")
+	div.wrapper.animated
+		div.calculator__wrapper
+			h2.calculator__title Калькулятор
+			form(class="calc", id="appPereezd", v-on:change="calculateTheCost" v-on:input="calculateTheCost")
+				div.calc__row
+					div.calc__cell
+						input(type="radio", class="calc__radio", id="office-realestate", name="typeofrealestate", value="950", v-model="typeofrealestate")
+						label.calc__label.calc__label--radio(for="office-realestate") Офисное помещение
+						input(type="radio", class="calc__radio", id="live-realestate", name="typeofrealestate", value="1650", v-model="typeofrealestate")
+						label.calc__label.calc__label--radio(for="live-realestate") Жилое помещение
+				div.calc__row
+					div.calc__cell
+						label.calc__label
+						input(type="range", min="10", max="1000", class="calc__range", id="sizeof-room", v-model="valuerange")
+					div.calc__cell.calc__cell--no-wrap
+						label.calc__label.calc__label--checkbox(for="pack") Упаковка?
+						input(type="checkbox", class="calc__checkbox", id="pack", v-model="pack")
+				div.calc__row
+					div.calc__cell
+						div.calc__label Итого стоимость:
+						div.calc__all-total-cost
+							span.calc__money-value {{ result | discharges}}
+							span.calc__money-currency ₸			
+								

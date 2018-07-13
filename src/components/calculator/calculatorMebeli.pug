@@ -13,54 +13,54 @@ section.calculator(id="calculator")
 					div.calc__cell
 						input(type="number", min=0 class="calc__field calc__field--number", v-model="gaz")
 					div.calc__cell
-						span.word-xs Цена за час -
-						span 2500 ₸
+						span 2 500 ₸ -
+						span.word-xs Цена за час
 					div.calc__cell 
 						span.word-xs Стоимость -
-						span {{ gazsum }} ₸
+						span {{ gazsum | discharges}} ₸
 				div.calc__row
 					div.calc__cell.calc__cell--bold Грузчики, 2 человека:
 					div.calc__cell
 						input(type="number", min=0 class="calc__field calc__field--number", v-model="mover")
 					div.calc__cell
-						span.word-xs Цена за час -
-						span 3000 ₸
+						span 3 000 ₸ -
+						span.word-xs Цена за час
 					div.calc__cell
 						span.word-xs Стоимость -
-						span {{ moversum }} ₸
+						span {{ moversum | discharges}} ₸
 				div.calc__row
 					div.calc__cell.calc__cell--bold Мебельщик:
 					div.calc__cell
 						input(type="number", min=0 class="calc__field calc__field--number", v-model="furnitureman")
 					div.calc__cell
-						span.word-xs Цена за час -
-						span 2000 ₸
+						span 2 000 ₸ -
+						span.word-xs Цена за час
 					div.calc__cell 
 						span.word-xs Стоимость -
-						span {{ furnituremansum }} ₸
+						span {{ furnituremansum | discharges}} ₸
 				div.calc__row
 					div.calc__cell.calc__cell--bold Упаковщик:
 					div.calc__cell
 						input(type="number", min=0 class="calc__field calc__field--number", v-model="packman")
 					div.calc__cell
-						span.word-xs Цена за час -
-						span 1500 ₸
+						span 1 500 ₸ -
+						span.word-xs Цена за час
 					div.calc__cell 
 						span.word-xs Стоимость -
-						span {{ packmansum }} ₸
+						span {{ packmansum | discharges}} ₸
 				div.calc__row
 					div.calc__cell.calc__cell--bold Супервайзер:
 					div.calc__cell
 						input(type="number", min=0 class="calc__field calc__field--number", v-model="supervaizer")
 					div.calc__cell
-						span.word-xs Цена за час -
-						span 2000 ₸
+						span 2 000 ₸ -
+						span.word-xs Цена за час
 					div.calc__cell 
 						span.word-xs Стоимость -
-						span {{ supervaizersum }} ₸
+						span {{ supervaizersum | discharges }} ₸
 				div.calc__row
 					div.calc__cell.calc__cell--name Общая стоимость:
 					div.calc__cell
 						div.calc__all-total-cost
-							span.calc__money-value {{ allsum }}
+							span.calc__money-value {{ allsum | discharges}}
 							span.calc__money-currency ₸

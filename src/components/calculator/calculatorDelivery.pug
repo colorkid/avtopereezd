@@ -77,11 +77,11 @@ section.calculator(id="calculator")
 							div.calc__cell
 								div.calc__label Стоимость страхования:
 								div.calc__insurance-value
-									span.calc__money-value {{ sumofinsurance }}
+									span.calc__money-value {{ sumofinsurance | discharges}}
 									span.calc__money-currency ₸
 						div.calc__row
 							div.calc__cell
 								div.calc__label Итого стоимость:
 								div.calc__all-total-cost
-									span.calc__money-value {{ result }}
+									span.calc__money-value {{ result | discharges}}
 									span.calc__money-currency ₸

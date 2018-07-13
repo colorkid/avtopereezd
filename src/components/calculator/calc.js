@@ -2,6 +2,7 @@ function isNumeric(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
+if(document.querySelector("#app")) {
 var app = new Vue({
   el: '#app',
   data: {
@@ -55,14 +56,21 @@ var app = new Vue({
     	let value = (this.dataCitys[this.from][this.to] * (this.weight > this.volumeWeight ? this.weight : this.volumeWeight)) * this.numberOfPackages;
     	
     	if(isNumeric(value) === true) {
-    		this.result = String(value).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+    		this.result = value;
     	} else {
     		this.result = "Одинаковый город";
     	}
     },
 
     calculateInsurance() {
-    	this.sumofinsurance = String(Math.round((this.insurance * 0.35 / 100) * 100) / 100).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+    	this.sumofinsurance = Math.round((this.insurance * 0.35 / 100) * 100) / 100;
+    }
+  },
+
+  filters: {
+    discharges: function (value) {
+      return String(value).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
     }
   }
 });
+}

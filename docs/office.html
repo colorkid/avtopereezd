@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Газель Алматы</title>
+    <title>Офисный переезд Алматы</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=2.0">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Marck+Script&amp;amp;subset=cyrillic" rel="stylesheet">
@@ -59,7 +59,7 @@
                     <div class="first-screen__foto"><img src="images/components/first-screen/shab3.jpg" alt="Avtoperevozchik логистическая компания"></div>
                   </div>
                   <div class="first-screen__top">
-                    <h1 class="first-screen__title">Газель Алматы</h1>
+                    <h1 class="first-screen__title">Офисный переезд Алматы</h1>
                   </div>
                 </div>
                 <div class="first-screen__middle">
@@ -222,57 +222,29 @@
         <div class="wrapper animated">
           <div class="calculator__wrapper">
             <h2 class="calculator__title">Калькулятор</h2>
-            <form class="calc" id="appMebel" v-on:change="calculateTheCost" v-on:click="calculateTheCost">
+            <form class="calc" id="appPereezd" v-on:change="calculateTheCost" v-on:input="calculateTheCost">
               <div class="calc__row">
-                <div class="calc__cell calc__cell--name calc__cell--lg">Наименование</div>
-                <div class="calc__cell calc__cell--name calc__cell--lg">Количество часов</div>
-                <div class="calc__cell calc__cell--name calc__cell--lg">Цена за час</div>
-                <div class="calc__cell calc__cell--name calc__cell--lg">Стоимость</div>
-              </div>
-              <div class="calc__row">
-                <div class="calc__cell calc__cell--bold">Газель (1,5 т)</div>
                 <div class="calc__cell">
-                  <input class="calc__field calc__field--number" type="number" min="0" v-model="gaz">
+                  <input class="calc__radio" type="radio" id="office-realestate" name="typeofrealestate" value="950" v-model="typeofrealestate">
+                  <label class="calc__label calc__label--radio" for="office-realestate">Офисное помещение</label>
+                  <input class="calc__radio" type="radio" id="live-realestate" name="typeofrealestate" value="1650" v-model="typeofrealestate">
+                  <label class="calc__label calc__label--radio" for="live-realestate">Жилое помещение</label>
                 </div>
-                <div class="calc__cell"><span>2 500 ₸ -</span><span class="word-xs">Цена за час</span></div>
-                <div class="calc__cell"> <span class="word-xs">Стоимость -</span><span>{{ gazsum | discharges}} ₸</span></div>
               </div>
               <div class="calc__row">
-                <div class="calc__cell calc__cell--bold">Грузчики, 2 человека:</div>
                 <div class="calc__cell">
-                  <input class="calc__field calc__field--number" type="number" min="0" v-model="mover">
+                  <label class="calc__label"></label>
+                  <input class="calc__range" type="range" min="10" max="1000" id="sizeof-room" v-model="valuerange">
                 </div>
-                <div class="calc__cell"><span>3 000 ₸ -</span><span class="word-xs">Цена за час</span></div>
-                <div class="calc__cell"><span class="word-xs">Стоимость -</span><span>{{ moversum | discharges}} ₸</span></div>
-              </div>
-              <div class="calc__row">
-                <div class="calc__cell calc__cell--bold">Мебельщик:</div>
-                <div class="calc__cell">
-                  <input class="calc__field calc__field--number" type="number" min="0" v-model="furnitureman">
+                <div class="calc__cell calc__cell--no-wrap">
+                  <label class="calc__label calc__label--checkbox" for="pack">Упаковка?</label>
+                  <input class="calc__checkbox" type="checkbox" id="pack" v-model="pack">
                 </div>
-                <div class="calc__cell"><span>2 000 ₸ -</span><span class="word-xs">Цена за час</span></div>
-                <div class="calc__cell"> <span class="word-xs">Стоимость -</span><span>{{ furnituremansum | discharges}} ₸</span></div>
               </div>
               <div class="calc__row">
-                <div class="calc__cell calc__cell--bold">Упаковщик:</div>
                 <div class="calc__cell">
-                  <input class="calc__field calc__field--number" type="number" min="0" v-model="packman">
-                </div>
-                <div class="calc__cell"><span>1 500 ₸ -</span><span class="word-xs">Цена за час</span></div>
-                <div class="calc__cell"> <span class="word-xs">Стоимость -</span><span>{{ packmansum | discharges}} ₸</span></div>
-              </div>
-              <div class="calc__row">
-                <div class="calc__cell calc__cell--bold">Супервайзер:</div>
-                <div class="calc__cell">
-                  <input class="calc__field calc__field--number" type="number" min="0" v-model="supervaizer">
-                </div>
-                <div class="calc__cell"><span>2 000 ₸ -</span><span class="word-xs">Цена за час</span></div>
-                <div class="calc__cell"> <span class="word-xs">Стоимость -</span><span>{{ supervaizersum | discharges }} ₸</span></div>
-              </div>
-              <div class="calc__row">
-                <div class="calc__cell calc__cell--name">Общая стоимость:</div>
-                <div class="calc__cell">
-                  <div class="calc__all-total-cost"><span class="calc__money-value">{{ allsum | discharges}}</span><span class="calc__money-currency">₸</span></div>
+                  <div class="calc__label">Итого стоимость:</div>
+                  <div class="calc__all-total-cost"><span class="calc__money-value">{{ result | discharges}}</span><span class="calc__money-currency">₸			</span></div>
                 </div>
               </div>
             </form>

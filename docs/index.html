@@ -12,8 +12,8 @@
 <div class="wrapper">
 <div class="header__wrapper">
 <div class="main-phones">
-<a href="tel:+72735466038" class="main-phones__item">8 (727) 354-66-03</a>
-<a href="tel:+7072546603" class="main-phones__item">8 (707) 254-66-03</a>
+<a href="tel:+7273540034" class="main-phones__item">8 (727) 354-00-34</a>
+<a href="tel:+7073540034" class="main-phones__item">8 (707) 354-00-34</a>
 </div>
 <nav class="header__nav">
 <ul class="main-menu">
@@ -303,13 +303,13 @@
                 </div>
                 <div class="calc__cell">
                   <div class="calc__label">Стоимость страхования:</div>
-                  <div class="calc__insurance-value"><span class="calc__money-value">{{ sumofinsurance }}</span><span class="calc__money-currency">₸</span></div>
+                  <div class="calc__insurance-value"><span class="calc__money-value">{{ sumofinsurance | discharges}}</span><span class="calc__money-currency">₸</span></div>
                 </div>
               </div>
               <div class="calc__row">
                 <div class="calc__cell">
                   <div class="calc__label">Итого стоимость:</div>
-                  <div class="calc__all-total-cost"><span class="calc__money-value">{{ result }}</span><span class="calc__money-currency">₸</span></div>
+                  <div class="calc__all-total-cost"><span class="calc__money-value">{{ result | discharges}}</span><span class="calc__money-currency">₸</span></div>
                 </div>
               </div>
             </form>
@@ -420,7 +420,7 @@
             </div>
             <div class="company-info">
               <h3 class="company-info__title">Реквизиты:</h3>
-              <div class="company-info__row company-info__row--tel">8 (727) 354-66-03; 8 (727) 254-66-03</div>
+              <div class="company-info__row company-info__row--tel">8 (727) 354-00-34; 8 (707) 354-00-34</div>
               <div class="company-info__row company-info__row--email">info@avtopereezd.kz</div>
               <div class="company-info__row company-info__row--map">050007, Республика Казахстан, г. Алматы, Медеуский район, ул. Добролюбова, 47а</div>
               <div class="company-info__row company-info__row--docs">
