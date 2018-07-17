@@ -4,9 +4,9 @@ var app = new Vue({
   el: '#appPereezd',
   data: {
     result: 0,
-    typeofrealestate: 0,
+    typeofrealestate: 950,
     pack: false,
-    valuerange: 10
+    valuerange: 10,
   },
 
   created: function () {

@@ -4,18 +4,22 @@ section.calculator(id="calculator")
 			h2.calculator__title Калькулятор
 			form(class="calc", id="appPereezd", v-on:change="calculateTheCost" v-on:input="calculateTheCost")
 				div.calc__row
-					div.calc__cell
+					div.calc__cell.calc__cell--flex-start-xs
+						label.calc__label Тип помещение:
 						input(type="radio", class="calc__radio", id="office-realestate", name="typeofrealestate", value="950", v-model="typeofrealestate")
 						label.calc__label.calc__label--radio(for="office-realestate") Офисное помещение
 						input(type="radio", class="calc__radio", id="live-realestate", name="typeofrealestate", value="1650", v-model="typeofrealestate")
 						label.calc__label.calc__label--radio(for="live-realestate") Жилое помещение
-				div.calc__row
-					div.calc__cell
-						label.calc__label
-						input(type="range", min="10", max="1000", class="calc__range", id="sizeof-room", v-model="valuerange")
-					div.calc__cell.calc__cell--no-wrap
+					div.calc__cell.calc__cell--no-wrap.calc__cell--flex-start-xs
 						label.calc__label.calc__label--checkbox(for="pack") Упаковка?
 						input(type="checkbox", class="calc__checkbox", id="pack", v-model="pack")
+				div.calc__row
+					div.calc__cell
+						div.calc__label.calc__label--range Площадь помещения:
+							div.range-result
+								span.value-range {{ valuerange | discharges }}
+								span.value-range-currency м <sup>2</sup>
+						input(type="range", min="10", max="1000", class="calc__range", id="sizeof-room", v-model="valuerange")
 				div.calc__row
 					div.calc__cell
 						div.calc__label Итого стоимость:

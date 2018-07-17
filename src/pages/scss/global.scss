@@ -125,6 +125,43 @@ main {
 	display: none;
 }
 
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"] + label {
+	position: relative;
+	padding: 0 0 0 30px;
+	cursor: pointer;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 15px;
+		height: 15px;
+		border: 2px solid darken($crem, 15%);
+		border-radius: 50%;
+		background-color: #fff;
+	}
+}
+
+input[type="radio"]:checked + label {
+	&:before {
+		content: "";
+		position: absolute;
+	    top: 5.5px;
+	    left: 5.5px;
+	    width: 8.5px;
+	    height: 8.5px;
+		border-radius: 50%;
+		background-color: $primary;
+		z-index: 1;
+	}
+}
+
+
 @media (max-width: 1024px) {
 	.word-xs {
 		display: inline-block;

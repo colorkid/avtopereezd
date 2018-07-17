@@ -70,9 +70,9 @@ var app = new Vue({
   el: '#appPereezd',
   data: {
     result: 0,
-    typeofrealestate: 0,
+    typeofrealestate: 950,
     pack: false,
-    valuerange: 10
+    valuerange: 10,
   },
 
   created: function () {
@@ -169,7 +169,7 @@ var app = new Vue({
   }
 });
 }
-if($('.calc__row.calc__row--insurance.calc__row--hide').length !== 0){
+if($('#insurance').length !== 0){
 	$('.calc__row.calc__row--insurance.calc__row--hide').slideFadeToggle('slow');
 }
 
@@ -178,6 +178,9 @@ $('#insurance').click(function(){
     $(this).parent().toggleClass("calc__cell--border-bottom-no");
 });
 
+$('.calc__label.calc__label--checkbox').click(function(){
+	$(this).toggleClass("calc__label--active-checkbox");
+});
 (function(){
   $('.main-menu__link').click(function(){
     let el = $(this).attr('href');
