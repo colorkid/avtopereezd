@@ -1,0 +1,66 @@
+section.calculator(id="calculator")
+	div.wrapper.animated
+		div.calculator__wrapper
+			h2.calculator__title Калькулятор
+			form(class="calc", id="appTrash", v-on:change="calculateTheCost" v-on:click="calculateTheCost")
+				div.calc__row
+					div.calc__cell.calc__cell--name.calc__cell--lg Наименование
+					div.calc__cell.calc__cell--name.calc__cell--lg Количество
+					div.calc__cell.calc__cell--name.calc__cell--lg Цена за рейс
+					div.calc__cell.calc__cell--name.calc__cell--lg Стоимость
+				div.calc__row
+					div.calc__cell.calc__cell--bold Газель (1,5 т)
+					div.calc__cell
+						input(type="number", min=0 class="calc__field calc__field--number", v-model="gaz")
+					div.calc__cell
+						span 10 000 ₸ -
+						span.word-xs Цена за рейс
+					div.calc__cell 
+						span.word-xs Стоимость -
+						span {{ gazsum | discharges}} ₸
+				div.calc__row
+					div.calc__cell.calc__cell--bold Зил (2,5 т):
+					div.calc__cell
+						input(type="number", min=0 class="calc__field calc__field--number", v-model="zil")
+					div.calc__cell
+						span 18 000 ₸ -
+						span.word-xs Цена за рейс
+					div.calc__cell
+						span.word-xs Стоимость -
+						span {{ zilsum | discharges}} ₸
+				div.calc__row
+					div.calc__cell.calc__cell--bold Камаз (15 т):
+					div.calc__cell
+						input(type="number", min=0 class="calc__field calc__field--number", v-model="kamaz")
+					div.calc__cell
+						span 35 000 ₸ -
+						span.word-xs Цена за рейс
+					div.calc__cell 
+						span.word-xs Стоимость -
+						span {{ kamazsum | discharges}} ₸
+				div.calc__row
+					div.calc__cell.calc__cell--bold Грузчики (2 человека/час):
+					div.calc__cell
+						input(type="number", min=0 class="calc__field calc__field--number", v-model="packman")
+					div.calc__cell
+						span 3 000 ₸ -
+						span.word-xs Цена за рейс
+					div.calc__cell 
+						span.word-xs Стоимость -
+						span {{ packmansum | discharges}} ₸
+				div.calc__row
+					div.calc__cell.calc__cell--bold Грузчики (4 человека/час):
+					div.calc__cell
+						input(type="number", min=0 class="calc__field calc__field--number", v-model="doublepackman")
+					div.calc__cell
+						span 6 000 ₸ -
+						span.word-xs Цена за рейс
+					div.calc__cell 
+						span.word-xs Стоимость -
+						span {{ doublepackmansum | discharges }} ₸
+				div.calc__row
+					div.calc__cell.calc__cell--name Общая стоимость:
+					div.calc__cell
+						div.calc__all-total-cost
+							span.calc__money-value {{ allsum | discharges}}
+							span.calc__money-currency ₸

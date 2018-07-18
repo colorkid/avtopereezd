@@ -1,4 +1,4 @@
-mixin calculator(arr)
+mixin calculator(arr, trash)
 	section.calculator.calculator--info
 			div.wrapper.animated
 				div.calculator__wrapper.calculator__wrapper--info
@@ -6,3 +6,8 @@ mixin calculator(arr)
 					ul.calculator-info__ul
 						each item, index in arr
 							li.calculator-info__item= item
+					if trash
+						h3.calculator-info__title.calculator__margin-top40 Перечень работ:
+						ul.calculator-info__ul
+							each itemT, index in trash
+								li.calculator-info__item= itemT
