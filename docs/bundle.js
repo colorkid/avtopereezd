@@ -77,7 +77,7 @@ var app = new Vue({
     result: 0,
     typeofrealestate: 950,
     pack: false,
-    valuerange: 22,
+    valuerange: 20,
   },
 
   created: function () {
