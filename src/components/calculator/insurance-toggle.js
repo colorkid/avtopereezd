@@ -14,3 +14,7 @@ $('#insurance').click(function(){
 $('.calc__label.calc__label--checkbox').click(function(){
 	$(this).toggleClass("calc__label--active-checkbox");
 });
+
+
+$('input[type="number"]').styler();
+

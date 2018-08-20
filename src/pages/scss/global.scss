@@ -182,4 +182,5 @@ input[type="radio"]:checked + label {
 @import "../../components/up/up";
 @import "../../components/footer/footer";
 @import "../../components/popup/popup";
-@import "../../../node_modules/animatecss/animate";
+@import "../../../node_modules/jquery-form-styler/dist/jquery.formstyler";
+@import "animate";

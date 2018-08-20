@@ -34,7 +34,7 @@ gulp.task('img', function () {
 });
 
 gulp.task('vendor', function() {  
-  return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/vue/dist/vue.min.js', 'src/**/*.js'])
+  return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/vue/dist/vue.min.js', 'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js', 'src/**/*.js'])
   .pipe(concat('bundle.js'))
   .pipe(gulp.dest('docs/')).pipe(browserSync.reload({
     stream:true

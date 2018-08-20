@@ -131,6 +131,10 @@
 		&:focus {
 			border: 1px solid $primary;
 		}
+
+		&--number {
+			position: relative;
+		}
 	}
 
 	&__select {
@@ -233,6 +237,32 @@ input[type=range]::-ms-thumb {
 	    line-height: 1.4;
 	    padding: 5px 0;
 	    border-bottom: 1px dotted darken($crem, 15%);
+	}
+}
+
+.jq-number {
+
+	&__spin {
+		position: absolute;
+		right: -25px;
+		width: 20px;
+		height: 19px;
+		cursor: pointer;
+		border: 1px solid darken($crem, 15%);
+		background-color: #fff;
+		background-size: 11px;
+    	background-position: center;
+    	background-repeat: no-repeat;
+	}
+
+	&__spin.minus {
+		top: 21px;
+		background-image: url("images/components/calculator/minus-button.svg");
+	}
+
+	&__spin.plus {
+		top: 0;
+		background-image: url("images/components/calculator/add-filled-cross-sign.svg");
 	}
 }
 
