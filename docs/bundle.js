@@ -251,14 +251,6 @@ $('.calc__label.calc__label--checkbox').click(function(){
 $('input[type="number"]').styler();
 
 
-$(".button--header").click(function() {
-	$(".popup").addClass("popup--active");
-});
-
-$(".popup-form__close").click(function() {
-	$(".popup").removeClass("popup--active");
-});
-
 (function(){
   $('.main-menu__link').click(function(){
     let el = $(this).attr('href');
@@ -278,6 +270,14 @@ $(".popup-form__close").click(function() {
     }, 500);
   }
 })();
+$(".button--header").click(function() {
+	$(".popup").addClass("popup--active");
+});
+
+$(".popup-form__close").click(function() {
+	$(".popup").removeClass("popup--active");
+});
+
 $('.up-arrow').fadeOut(0);
 
 $(function() {
